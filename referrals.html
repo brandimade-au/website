@@ -376,7 +376,7 @@
   <button class="nav-hamburger" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
     <span></span><span></span><span></span>
   </button>
-  <div class="logo"><a href="index.html"><img src="https://images.squarespace-cdn.com/content/v1/6876314015f2f552f09dcf7e/cba38361-3b90-4ece-a3af-92b988dbea65/Screenshot_2025-10-19_at_8.58.09_am-removebg-preview.png?format=1500w" alt="Brandi Made"></a></div>
+  <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Brandi Made"></a></div>
   <ul id="navMenu">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
@@ -484,23 +484,25 @@
     <div class="section-label">Submit a Referral</div>
     <h2 class="section-title">Refer someone <em>now</em></h2>
     <p class="form-sub">Fill in the details below and we'll take it from there. We'll be in touch once their order is confirmed.</p>
-    <div class="ref-form">
+    <form class="ref-form" name="referral" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+      <input type="hidden" name="form-name" value="referral">
+      <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
       <div class="form-grid">
         <div class="form-group">
-          <label>Your First Name *</label>
-          <input type="text" id="your-fname" placeholder="Jane">
+          <label for="your-fname">Your First Name *</label>
+          <input type="text" id="your-fname" name="your-first-name" placeholder="Jane" required>
         </div>
         <div class="form-group">
-          <label>Your Last Name *</label>
-          <input type="text" id="your-lname" placeholder="Smith">
+          <label for="your-lname">Your Last Name *</label>
+          <input type="text" id="your-lname" name="your-last-name" placeholder="Smith" required>
         </div>
         <div class="form-group">
-          <label>Your Company *</label>
-          <input type="text" id="your-company" placeholder="Acme Pty Ltd">
+          <label for="your-company">Your Company *</label>
+          <input type="text" id="your-company" name="your-company" placeholder="Acme Pty Ltd" required>
         </div>
         <div class="form-group">
-          <label>Your Email *</label>
-          <input type="email" id="your-email" placeholder="jane@company.com.au">
+          <label for="your-email">Your Email *</label>
+          <input type="email" id="your-email" name="your-email" placeholder="jane@company.com.au" required>
         </div>
       </div>
 
@@ -508,31 +510,31 @@
 
       <div class="form-grid">
         <div class="form-group">
-          <label>Their Name *</label>
-          <input type="text" id="ref-name" placeholder="Alex Johnson">
+          <label for="ref-name">Their Name *</label>
+          <input type="text" id="ref-name" name="referral-name" placeholder="Alex Johnson" required>
         </div>
         <div class="form-group">
-          <label>Their Company *</label>
-          <input type="text" id="ref-company" placeholder="Their Business Pty Ltd">
+          <label for="ref-company">Their Company *</label>
+          <input type="text" id="ref-company" name="referral-company" placeholder="Their Business Pty Ltd" required>
         </div>
         <div class="form-group full">
-          <label>Their Email or Phone *</label>
-          <input type="text" id="ref-contact" placeholder="alex@theirbusiness.com.au or 04XX XXX XXX">
+          <label for="ref-contact">Their Email or Phone *</label>
+          <input type="text" id="ref-contact" name="referral-contact" placeholder="alex@theirbusiness.com.au or 04XX XXX XXX" required>
         </div>
         <div class="form-group full">
-          <label>Anything else we should know?</label>
-          <textarea id="ref-notes" placeholder="e.g. what they're looking for, when they need it..."></textarea>
+          <label for="ref-notes">Anything else we should know?</label>
+          <textarea id="ref-notes" name="referral-notes" placeholder="e.g. what they're looking for, when they need it..."></textarea>
         </div>
       </div>
 
       <div class="form-submit">
-        <button class="btn-primary" onclick="submitReferral()">Submit Referral</button>
+        <button type="submit" class="btn-primary">Submit Referral</button>
         <p class="form-note">We'll confirm receipt within 24 hours</p>
       </div>
       <div class="form-success" id="refSuccess">
         ✅ Referral submitted! We'll be in touch within 24 hours to confirm.
       </div>
-    </div>
+    </form>
   </div>
 </section>
 
@@ -617,7 +619,7 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="https://images.squarespace-cdn.com/content/v1/6876314015f2f552f09dcf7e/cba38361-3b90-4ece-a3af-92b988dbea65/Screenshot_2025-10-19_at_8.58.09_am-removebg-preview.png?format=1500w" alt="Brandi Made">
+        <img src="images/logo.png" alt="Brandi Made">
         <p>Premium promotional products for Australian businesses. Quality merchandise that stays in use, and keeps your brand front-of-mind.</p>
       </div>
       <div class="footer-col">
