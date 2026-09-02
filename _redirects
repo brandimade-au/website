@@ -1,2 +1,6 @@
 # Redirect Netlify subdomain to custom domain
 https://brandimade.netlify.app/* https://brandimade.com.au/:splat 301!
+
+# Keep internal project docs out of the public site
+/CLAUDE.md  /  301!
+/README.md  /  301!
