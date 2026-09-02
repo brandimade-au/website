@@ -1,0 +1,1869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<title>Promotional Products &amp; Branded Merchandise Australia | Brandi Made</title>
+<meta name="description" content="Premium promotional products and branded merchandise for Australian businesses. Custom hats, apparel, bags &amp; corporate gifts. Fast turnaround, photo samples, 100% satisfaction guarantee.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://brandimade.com.au/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Promotional Products &amp; Branded Merchandise Australia | Brandi Made">
+<meta property="og:description" content="Premium promotional products and branded merchandise for Australian businesses. Custom hats, apparel, bags &amp; corporate gifts with fast turnaround and photo samples.">
+<meta property="og:url" content="https://brandimade.com.au/">
+<meta property="og:site_name" content="Brandi Made">
+<meta property="og:locale" content="en_AU">
+<meta property="og:image" content="https://brandimade.com.au/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Custom embroidered caps by Brandi Made">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://brandimade.com.au/images/og-image.jpg">
+<meta name="twitter:title" content="Promotional Products &amp; Branded Merchandise Australia | Brandi Made">
+<meta name="twitter:description" content="Premium promotional products and branded merchandise for Australian businesses. Custom hats, apparel, bags &amp; corporate gifts with fast turnaround and photo samples.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "LocalBusiness"],
+      "@id": "https://brandimade.com.au/#organization",
+      "name": "Brandi Made",
+      "url": "https://brandimade.com.au/",
+      "description": "Australian promotional products and branded merchandise supplier based in Brisbane, QLD.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Brisbane",
+        "addressRegion": "QLD",
+        "addressCountry": "AU"
+      },
+      "areaServed": "AU",
+      "priceRange": "$$",
+      "email": "service@brandimade.com.au",
+      "telephone": "+61469757427"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://brandimade.com.au/#website",
+      "url": "https://brandimade.com.au/",
+      "name": "Brandi Made",
+      "publisher": { "@id": "https://brandimade.com.au/#organization" }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="images/hero-caps.webp" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark: #152228;
+    --mid: #4e8098;
+    --light: #bbd2e4;
+    --red: #a31621;
+    --offwhite: #f5f2ee;
+    --white: #ffffff;
+    --text-dark: #1a2d35;
+    --text-mid: #4a5e66;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-dark);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(21,34,40,0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(187,210,228,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    height: 72px;
+  }
+
+  nav .logo img {
+    height: 36px;
+    filter: brightness(0) invert(1);
+    opacity: 0.92;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 36px;
+    align-items: center;
+  }
+
+  nav ul a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.72);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  nav ul a:hover { color: var(--light); }
+
+  nav .nav-cta {
+    background: var(--red);
+    color: white !important;
+    padding: 10px 22px;
+    border-radius: 2px;
+    opacity: 1 !important;
+    transition: background 0.2s !important;
+  }
+
+  nav .nav-cta:hover { background: #c01c2a !important; color: white !important; }
+
+  .nav-hamburger { display: none; }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 70vh;
+    background: var(--dark);
+    background-image: url('images/hero-caps.webp');
+    background-size: cover;
+    background-position: center bottom;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0 5%;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(21,34,40,0.38);
+    z-index: 1;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(78,128,152,0.18) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -15%;
+    left: -5%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(187,210,228,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+    padding-top: 72px;
+    padding-right: 4%;
+    padding-left: 52%;
+    position: relative;
+    z-index: 2;
+    align-items: flex-start;
+  }
+
+  .hero-left { position: relative; z-index: 2; max-width: 420px; text-align: left; }
+
+  @media (max-width: 768px) {
+    .hero {
+      min-height: 85vh;
+      background-position: center 30%;
+      align-items: flex-end;
+      padding-bottom: 0;
+    }
+
+    .hero-overlay {
+      background: linear-gradient(to top, rgba(21,34,40,0.85) 0%, rgba(21,34,40,0.25) 55%, rgba(21,34,40,0.1) 100%);
+    }
+
+    .hero-grid {
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 0;
+      padding-bottom: 44px;
+      align-items: flex-start;
+    }
+
+    .hero-left {
+      max-width: 100%;
+      text-align: left;
+    }
+
+    .hero h1 {
+      white-space: normal;
+      font-size: clamp(1.7rem, 6.5vw, 2.2rem);
+    }
+
+    .hero-sub {
+      font-size: 0.9rem;
+      max-width: 100%;
+      margin-bottom: 28px;
+    }
+
+    .hero-ctas {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      width: 100%;
+      gap: 10px;
+    }
+
+    .hero-ctas .btn-primary,
+    .hero-ctas .btn-outline {
+      flex: 1 1 auto;
+      max-width: 100%;
+      text-align: center;
+      padding: 14px 20px;
+      font-size: 0.8rem;
+    }
+
+    /* Section titles: wrap on mobile so text is never cut off */
+    .section-title {
+      white-space: normal;
+      overflow: visible;
+      text-overflow: clip;
+      font-size: clamp(1.3rem, 5vw, 2rem);
+    }
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: #ffffff;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--white);
+    margin-bottom: 28px;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--light);
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.62);
+    margin-bottom: 48px;
+    max-width: 380px;
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .btn-primary {
+    background: var(--red);
+    color: white;
+    padding: 16px 36px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: #c01c2a;
+    transform: translateY(-1px);
+  }
+
+  .btn-outline {
+    color: var(--light);
+    padding: 15px 36px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid rgba(187,210,228,0.35);
+    display: inline-block;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--light);
+    color: white;
+  }
+
+
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: rgba(187,210,228,0.08);
+    border: 1px solid rgba(187,210,228,0.12);
+  }
+
+  .stat-box {
+    padding: 32px 28px;
+    background: rgba(21,34,40,0.6);
+    border: 1px solid rgba(187,210,228,0.08);
+    backdrop-filter: blur(8px);
+  }
+
+  .stat-box .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--light);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-box .stat-label {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+  }
+
+  .hero-tagline {
+    padding: 20px 28px;
+    background: rgba(78,128,152,0.12);
+    border-left: 3px solid var(--mid);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.7);
+  }
+
+  /* ─── SECTION COMMON ─── */
+  section { padding: 72px 5%; }
+
+  .section-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--mid);
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 3vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--dark);
+    margin-bottom: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .section-title em {
+    font-style: normal;
+    color: var(--mid);
+  }
+
+  .section-sub {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--text-mid);
+    max-width: 520px;
+  }
+
+  /* ─── HOW IT WORKS ─── */
+  .how {
+    background: var(--offwhite);
+    position: relative;
+  }
+
+  .how-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .how-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 52px;
+  }
+
+  .how-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: rgba(21,34,40,0.08);
+  }
+
+  .step {
+    background: var(--white);
+    padding: 48px 36px;
+    position: relative;
+    transition: background 0.25s;
+  }
+
+  .step:hover { background: var(--dark); }
+  .step:hover .step-num { color: rgba(255,255,255,0.15); }
+  .step:hover .step-title { color: white; }
+  .step:hover .step-text { color: rgba(255,255,255,0.6); }
+  .step:hover .step-icon { background: rgba(78,128,152,0.2); color: var(--light); }
+
+  .step-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: rgba(21,34,40,0.06);
+    line-height: 1;
+    position: absolute;
+    top: 24px;
+    right: 28px;
+    transition: color 0.25s;
+  }
+
+  .step-icon {
+    width: 52px;
+    height: 52px;
+    background: rgba(78,128,152,0.1);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 24px;
+    color: var(--mid);
+    transition: background 0.25s, color 0.25s;
+  }
+
+  .step-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+    color: var(--dark);
+    transition: color 0.25s;
+  }
+
+  .step-text {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--text-mid);
+    transition: color 0.25s;
+  }
+
+  /* ─── WHY US ─── */
+  .why {
+    background: var(--dark);
+  }
+
+  .why-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .why-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 52px;
+  }
+
+  .why-header .section-title { color: white; }
+  .why-header .section-sub { color: rgba(255,255,255,0.55); }
+
+  .advantages {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    background: rgba(187,210,228,0.06);
+  }
+
+  .advantage {
+    background: rgba(21,34,40,0.7);
+    padding: 40px 32px;
+    border: 1px solid rgba(187,210,228,0.07);
+    transition: border-color 0.25s, background 0.25s;
+  }
+
+  .advantage:hover {
+    background: rgba(78,128,152,0.12);
+    border-color: rgba(187,210,228,0.2);
+  }
+
+  .adv-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(78,128,152,0.15);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--light);
+  }
+
+  .product-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(78,128,152,0.08);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    color: var(--mid);
+  }
+
+  .adv-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--light);
+    margin-bottom: 12px;
+  }
+
+  .adv-text {
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* ─── PRODUCTS ─── */
+  .products {
+    background: var(--offwhite);
+  }
+
+  .products-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .products-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 44px;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .product-card {
+    border: 1px solid rgba(21,34,40,0.08);
+    padding: 36px 28px;
+    position: relative;
+    transition: border-color 0.25s, transform 0.25s;
+    cursor: default;
+    background: white;
+  }
+
+  .product-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--mid);
+    transition: width 0.3s ease;
+  }
+
+  .product-card:hover { border-color: var(--mid); transform: translateY(-4px); }
+  .product-card:hover::before { width: 100%; }
+
+  .product-emoji-old {
+    font-size: 2rem;
+    margin-bottom: 18px;
+    display: block;
+  }
+
+  .product-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 10px;
+  }
+
+  .product-desc {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: var(--text-mid);
+  }
+
+  /* ─── ICP ─── */
+  .who {
+    background: var(--offwhite);
+  }
+
+  .who-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .who-header {
+    text-align: center;
+    margin-bottom: 44px;
+  }
+
+  .who-header .section-label { justify-content: center; }
+  .who-header .section-label::before { display: none; }
+
+  .segments {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2px;
+    background: rgba(21,34,40,0.07);
+  }
+
+  .segment {
+    background: var(--white);
+    padding: 36px 24px;
+    text-align: center;
+    transition: background 0.25s;
+  }
+
+  .segment:hover { background: var(--dark); }
+  .segment:hover .seg-icon { background: rgba(78,128,152,0.2); }
+  .segment:hover .seg-title { color: white; }
+  .segment:hover .seg-detail { color: rgba(255,255,255,0.5); }
+
+  .seg-icon {
+    width: 52px;
+    height: 52px;
+    background: rgba(78,128,152,0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin: 0 auto 20px;
+    transition: background 0.25s;
+  }
+
+  .seg-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 10px;
+    transition: color 0.25s;
+  }
+
+  .seg-detail {
+    font-size: 0.78rem;
+    line-height: 1.6;
+    color: var(--text-mid);
+    transition: color 0.25s;
+  }
+
+  /* ─── TRUST STRIP ─── */
+  .trust {
+    background: var(--mid);
+    padding: 52px 5%;
+  }
+
+  .trust-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: white;
+  }
+
+  .trust-item .t-icon {
+    font-size: 1.6rem;
+    opacity: 0.85;
+  }
+
+  .trust-item .t-text strong {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .trust-item .t-text span {
+    font-size: 0.78rem;
+    opacity: 0.75;
+  }
+
+  /* ─── FORM ─── */
+  .quote {
+    background: var(--dark);
+    padding: 72px 5%;
+  }
+
+  .quote-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .quote-left .section-title { color: white; }
+  .quote-left .section-sub { color: rgba(255,255,255,0.55); margin-bottom: 40px; }
+
+  .contact-details { display: flex; flex-direction: column; gap: 20px; }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.9rem;
+  }
+
+  .contact-item .c-icon {
+    font-size: 1.1rem;
+    margin-top: 1px;
+    color: var(--light);
+    flex-shrink: 0;
+  }
+
+  .contact-item a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  .contact-item a:hover { color: var(--light); }
+
+  .quote-form {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(187,210,228,0.12);
+    padding: 48px 44px;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .form-group.full { grid-column: 1 / -1; }
+
+  .form-group label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(187,210,228,0.15);
+    padding: 14px 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: white;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .form-group select option { background: var(--dark); color: white; }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--mid);
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+
+  .form-group textarea { resize: vertical; min-height: 110px; }
+
+  .form-submit {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 24px;
+  }
+
+  .form-note {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.35);
+  }
+
+  .form-success {
+    display: none;
+    background: rgba(78,128,152,0.15);
+    border: 1px solid rgba(78,128,152,0.35);
+    padding: 20px 24px;
+    margin-top: 20px;
+    color: var(--light);
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: #0d1b21;
+    padding: 60px 5% 32px;
+    border-top: 1px solid rgba(187,210,228,0.08);
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 52px;
+  }
+
+  .footer-brand img {
+    height: 28px;
+    filter: brightness(0) invert(1);
+    opacity: 0.7;
+    margin-bottom: 20px;
+  }
+
+  .footer-brand p {
+    font-size: 0.85rem;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.38);
+    max-width: 280px;
+  }
+
+  .footer-col h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 20px;
+  }
+
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+  .footer-col ul li a {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-col ul li a:hover { color: var(--light); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(187,210,228,0.07);
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-bottom p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.25);
+  }
+
+  .footer-tagline {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* ─── SCROLL ANIMATIONS ─── */
+  .fade-up {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .hero-grid,
+    .how-header,
+    .why-header,
+    .products-header,
+    .quote-inner { grid-template-columns: 1fr; gap: 40px; }
+
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+
+    .how-steps,
+    .advantages,
+    .product-grid { grid-template-columns: 1fr 1fr; }
+
+    .segments { grid-template-columns: 1fr 1fr; }
+
+    .footer-top { grid-template-columns: 1fr 1fr; }
+
+    nav ul { display: none; }
+    nav ul.open {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 72px; left: 0; right: 0;
+      background: rgba(21,34,40,0.98);
+      padding: 24px 5% 32px;
+      gap: 0;
+      z-index: 99;
+      border-bottom: 1px solid rgba(187,210,228,0.15);
+    }
+    nav ul.open li { border-bottom: 1px solid rgba(255,255,255,0.07); }
+    nav ul.open li a {
+      display: block;
+      padding: 14px 0;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+    }
+    nav ul.open .nav-cta {
+      margin-top: 12px;
+      display: inline-block;
+      padding: 12px 24px !important;
+    }
+    .nav-hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: none;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: rgba(255,255,255,0.85);
+      border-radius: 2px;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    nav .logo { position: absolute; left: 50%; transform: translateX(-50%); }
+  }
+
+  @media (max-width: 600px) {
+    .how-steps,
+    .advantages,
+    .product-grid,
+    .segments { grid-template-columns: 1fr; }
+
+    .form-grid { grid-template-columns: 1fr; }
+
+    .footer-top { grid-template-columns: 1fr; }
+
+    .trust-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
+
+    /* Section padding */
+    section { padding: 52px 5%; }
+    .how, .why, .products, .quote { padding-top: 52px; padding-bottom: 52px; }
+
+    /* Header areas */
+    .how-header, .why-header, .products-header { gap: 20px; margin-bottom: 36px; }
+    .section-title { font-size: clamp(1.1rem, 5vw, 1.8rem); white-space: normal; }
+    .section-sub { font-size: 0.9rem; }
+
+    /* Steps single col */
+    .step { padding: 28px 20px; }
+    .step-num { font-size: 2.8rem; top: 14px; right: 14px; }
+    .how-steps { grid-template-columns: 1fr; }
+
+    /* Why us, full width cards */
+    .advantage { padding: 24px 20px; }
+    .advantages { grid-template-columns: 1fr; }
+
+    /* Product cards */
+    .product-card { padding: 24px 18px; }
+    .product-name { font-size: 0.95rem; }
+    .product-desc { font-size: 0.82rem; }
+
+    /* Quote form */
+    .quote { padding: 52px 5%; }
+    .quote-form { padding: 24px 18px; }
+    .form-submit { flex-direction: column; align-items: stretch; gap: 12px; }
+    .form-submit .btn-primary { width: 100%; text-align: center; padding: 16px; }
+
+    /* Hero CTAs already handled but enforce button min height */
+    .btn-primary, .btn-outline { min-height: 48px; }
+
+    /* Trust strip */
+    .trust { padding: 32px 5%; }
+    .trust-item { width: 100%; }
+
+    /* Footer */
+    .footer-top { gap: 32px; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
+    footer { padding: 48px 5% 28px; }
+
+    /* Nav */
+    nav { padding: 0 5%; }
+  }
+
+
+
+  @media (max-width: 700px) {
+    .gallery-grid { grid-template-columns: 1fr 1fr; }
+    .gallery-item--tall { grid-row: span 1; aspect-ratio: 1; }
+  }
+
+
+  /* ─── PRODUCT SCROLL ─── */
+  .product-scroll-section {
+    position: relative;
+    overflow: hidden;
+    background: #faf9f7;
+    padding: 60px 0 70px;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  .scroll-headline {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 24px;
+  }
+  .scroll-headline h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin: 0;
+  }
+  .scroll-headline h2 em {
+    font-style: italic;
+    color: #c0212f;
+  }
+  .scroll-fade-left,
+  .scroll-fade-right {
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 140px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .scroll-fade-left  { left: 0;  background: linear-gradient(to right, #faf9f7 0%, transparent 100%); }
+  .scroll-fade-right { right: 0; background: linear-gradient(to left,  #faf9f7 0%, transparent 100%); }
+  .scroll-track-wrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+  .scroll-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scrollLeft 40s linear infinite;
+    will-change: transform;
+  }
+  .scroll-track:hover {
+    animation-play-state: paused;
+  }
+  @keyframes scrollLeft {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .scroll-card {
+    flex: 0 0 240px;
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+  }
+  .scroll-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.13);
+  }
+  .scroll-card-img {
+    width: 100%;
+    height: 200px;
+    background: #f4f2ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .scroll-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .product-scroll-section { padding: 44px 0 52px; }
+    .scroll-headline { margin-bottom: 28px; }
+    .scroll-card { flex: 0 0 180px; }
+    .scroll-card-img { height: 150px; }
+    .scroll-fade-left, .scroll-fade-right { width: 50px; }
+    .scroll-track { gap: 14px; animation-duration: 32s; }
+  }
+
+  
+  /* ─── TESTIMONIALS ─── */
+  .testimonials-section {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    padding: 72px 0 80px;
+    border-top: 1px solid rgba(0,0,0,0.06);
+  }
+  .testimonials-header {
+    text-align: center;
+    padding: 0 24px;
+    margin-bottom: 44px;
+  }
+  .tscroll-fade-left,
+  .tscroll-fade-right {
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 120px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .tscroll-fade-left  { left: 0;  background: linear-gradient(to right, #fff 0%, transparent 100%); }
+  .tscroll-fade-right { right: 0; background: linear-gradient(to left,  #fff 0%, transparent 100%); }
+  .tscroll-wrapper { overflow: hidden; width: 100%; }
+  .tscroll-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: tScrollLeft 52s linear infinite;
+    will-change: transform;
+  }
+  .tscroll-track:hover { animation-play-state: paused; }
+  @keyframes tScrollLeft {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .tcard {
+    flex: 0 0 300px;
+    background: #faf9f7;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  .tcard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 36px rgba(0,0,0,0.11);
+  }
+  .tcard-img {
+    width: 100%;
+    height: 180px;
+    background: #eeecea;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tcard-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .tcard-body {
+    padding: 20px 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+  }
+  .tcard-stars {
+    display: flex;
+    gap: 2px;
+  }
+  .tcard-text {
+    font-size: 0.875rem;
+    color: #3a3a3a;
+    line-height: 1.6;
+    margin: 0;
+    font-style: italic;
+    flex: 1;
+  }
+  .tcard-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border-top: 1px solid rgba(0,0,0,0.07);
+    padding-top: 12px;
+    margin-top: 4px;
+  }
+  .tcard-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+  .tcard-company {
+    font-size: 0.75rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .tcard-product {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4e8098;
+    background: rgba(78,128,152,0.1);
+    padding: 3px 8px;
+    border-radius: 3px;
+  }
+  @media (max-width: 768px) {
+    .testimonials-section { padding: 52px 0 60px; }
+    .testimonials-header { margin-bottom: 32px; }
+    .tcard { flex: 0 0 260px; }
+    .tcard-img { height: 150px; }
+    .tscroll-fade-left, .tscroll-fade-right { width: 40px; }
+    .tscroll-track { gap: 14px; animation-duration: 44s; }
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 300;
+    background: var(--dark);
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 0.85rem;
+  }
+  .skip-link:focus { left: 0; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .scroll-track, .tscroll-track { animation: none; }
+    .fade-up, .step, .advantage, .segment, .product-card, .scroll-card, .tcard, .btn-primary { transition: none; }
+  }
+  </style>
+</head>
+<body>
+
+<a class="skip-link" href="#home">Skip to main content</a>
+
+<!-- NAV -->
+<nav aria-label="Main navigation">
+  <button class="nav-hamburger" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="logo"><a href="index.html"><img src="https://images.squarespace-cdn.com/content/v1/6876314015f2f552f09dcf7e/cba38361-3b90-4ece-a3af-92b988dbea65/Screenshot_2025-10-19_at_8.58.09_am-removebg-preview.png?format=1500w" alt="Brandi Made"></a></div>
+  <ul id="navMenu">
+    <li><a href="about.html">About</a></li>
+    <li><a href="how-it-works.html">How It Works</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="faq.html">FAQs</a></li>
+    <li><a href="referrals.html">Referrals</a></li>
+    <li><a href="#quote" class="nav-cta">Get a Quote</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-overlay"></div>
+  <div class="hero-grid">
+    <div class="hero-left fade-up">
+      <div class="hero-eyebrow">Australian Promotional Products</div>
+      <h1>Products that stay.<br><em>Branding that sticks.</em></h1>
+      <p class="hero-sub">Premium branded merchandise for Australian businesses that care about quality. Fast turnaround, dedicated service, 100% satisfaction guarantee.</p>
+      <div class="hero-ctas">
+        <a href="#quote" class="btn-primary">Get a Free Quote</a>
+        <a href="shop.html" class="btn-outline">Browse Products</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT SCROLL -->
+<section class="product-scroll-section">
+  <div class="scroll-headline">
+    <h2>Branding that works <em>as hard as you do.</em></h2>
+  </div>
+  <div class="scroll-fade-left"></div>
+  <div class="scroll-fade-right"></div>
+  <div class="scroll-track-wrapper">
+    <div class="scroll-track" id="scrollTrack">
+        <div class="scroll-card">
+          <div class="scroll-card-img">
+            <img src="images/product-embroidered-cap.webp" alt="Embroidered Cap" loading="lazy">
+          </div>
+        </div>
+        <div class="scroll-card">
+          <div class="scroll-card-img">
+            <img src="images/product-canvas-tote.webp" alt="Canvas Tote Bag" loading="lazy">
+          </div>
+        </div>
+        <div class="scroll-card">
+          <div class="scroll-card-img">
+            <img src="images/product-staff-polo.webp" alt="Staff Polo Shirt" loading="lazy">
+          </div>
+        </div>
+        <div class="scroll-card">
+          <div class="scroll-card-img">
+            <img src="images/product-sports-duffle.webp" alt="Sports Duffle Bag" loading="lazy">
+          </div>
+        </div>
+        <div class="scroll-card">
+          <div class="scroll-card-img">
+            <img src="images/product-embroidered-cap.webp" alt="Embroidered Cap" loading="lazy">
+          </div>
+        </div>
+        <div class="scroll-card">
+          <div class="scroll-card-img">
+            <img src="images/product-canvas-tote.webp" alt="Canvas Tote Bag" loading="lazy">
+          </div>
+        </div>
+        <div class="scroll-card">
+          <div class="scroll-card-img">
+            <img src="images/product-staff-polo.webp" alt="Staff Polo Shirt" loading="lazy">
+          </div>
+        </div>
+        <div class="scroll-card">
+          <div class="scroll-card-img">
+            <img src="images/product-sports-duffle.webp" alt="Sports Duffle Bag" loading="lazy">
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="how-inner">
+    <div class="how-header">
+      <div class="fade-up">
+        <div class="section-label">The Process</div>
+        <h2 class="section-title">Simple from start <em>to delivery</em></h2>
+      </div>
+      <p class="section-sub fade-up" style="transition-delay:0.1s">End-to-end service means you don't have to manage anything. From browsing to delivery, we handle it all.</p>
+    </div>
+    <div class="how-steps">
+      <div class="step fade-up">
+        <div class="step-num">01</div>
+        <div class="step-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+        <div class="step-title">Browse &amp; Choose</div>
+        <p class="step-text">Explore our supplier catalogues and select products that suit your brand, budget, and occasion. Not sure what fits? We'll guide you.</p>
+      </div>
+      <div class="step fade-up" style="transition-delay:0.1s">
+        <div class="step-num">02</div>
+        <div class="step-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></div>
+        <div class="step-title">Submit Your Brief</div>
+        <p class="step-text">Fill in our simple order form with your details, quantities, artwork, and deadline. Your dedicated sales manager takes it from there.</p>
+      </div>
+      <div class="step fade-up" style="transition-delay:0.2s">
+        <div class="step-num">03</div>
+        <div class="step-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V10"/><path d="M23 3H1v7h22V3z"/><path d="M10 12h4"/></svg></div>
+        <div class="step-title">Quote &amp; Mockup in 24 Hours</div>
+        <p class="step-text">Receive a personalised quote and embroidery mockup within 24 hours. Approve or vary your proof until it's perfect, then sit back while we deliver your finished branded merch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why" id="why">
+  <div class="why-inner">
+    <div class="why-header">
+      <div class="fade-up">
+        <div class="section-label" style="color:var(--light)">Our Advantage</div>
+        <h2 class="section-title" style="color:white">Why businesses choose <em>Brandi Made</em></h2>
+      </div>
+      <p class="section-sub fade-up" style="transition-delay:0.1s">We work with organisations that hold their brand to a high standard, and expect their suppliers to do the same. If quality and execution matter to you, you're in the right place.</p>
+    </div>
+    <div class="advantages">
+      <div class="advantage fade-up" style="border: 1.5px solid rgba(230,168,23,0.45); background: rgba(230,168,23,0.07);">
+        <div class="adv-icon" style="background: rgba(230,168,23,0.18); color: #b8860b;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+        <div class="adv-title" style="color: #b8860b;">100% Quality Guarantee</div>
+        <p class="adv-text" style="color:rgba(255,255,255,0.7);">If it's not right, we fix it. No arguments, no runarounds. Total peace of mind on every single order. That's our promise.</p>
+        <div style="margin-top:14px; font-size:0.7rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#e6a817; opacity:0.9;">Our #1 promise</div>
+      </div>
+      <div class="advantage fade-up" style="transition-delay:0.1s">
+        <div class="adv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <div class="adv-title">Australian-Run &amp; Staffed</div>
+        <p class="adv-text">Direct communication, cultural alignment, and no offshore delays. You speak to real people who understand your market.</p>
+      </div>
+      <div class="advantage fade-up" style="transition-delay:0.2s">
+        <div class="adv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <div class="adv-title">Dedicated Sales Manager</div>
+        <p class="adv-text">One point of contact who learns your brand, manages every order, and ensures your vision is executed perfectly.</p>
+      </div>
+      <div class="advantage fade-up" style="transition-delay:0.3s">
+        <div class="adv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
+        <div class="adv-title">End-to-End Service</div>
+        <p class="adv-text">From product browsing to final delivery, we handle everything. You focus on your business. We handle your brand.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="testimonials-header fade-up">
+    <div class="section-label">Some of our happy clients</div>
+    <h2 class="section-title">What our clients <em>say</em></h2>
+  </div>
+  <div class="tscroll-fade-left"></div>
+  <div class="tscroll-fade-right"></div>
+  <div class="tscroll-wrapper">
+    <div class="tscroll-track">
+        <div class="tcard">
+          <div class="tcard-img">
+            <img src="images/client-johnson-real-estate-cap.webp" alt="Johnson Real Estate branded cap" loading="lazy">
+          </div>
+          <div class="tcard-body">
+            <div class="tcard-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <p class="tcard-text">"When the hats arrived, we were genuinely blown away by the quality and attention to detail. Couldn't be happier with the final product."</p>
+            <div class="tcard-meta">
+              <span class="tcard-name">Zanni Lewis</span>
+              <span class="tcard-company">Johnson Real Estate</span>
+              <span class="tcard-product">Embroidered Cap</span>
+            </div>
+          </div>
+        </div>
+        <div class="tcard">
+          <div class="tcard-img">
+            <img src="images/client-tcm-solutions-duffle.webp" alt="TCM Solutions branded duffle bag" loading="lazy">
+          </div>
+          <div class="tcard-body">
+            <div class="tcard-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <p class="tcard-text">"The bags are perfect, thank you!"</p>
+            <div class="tcard-meta">
+              <span class="tcard-name">Leia Pratten</span>
+              <span class="tcard-company">TCM Solutions</span>
+              <span class="tcard-product">Sports Bag</span>
+            </div>
+          </div>
+        </div>
+        <div class="tcard">
+          <div class="tcard-img">
+            <img src="images/client-formula-foods-trucker.webp" alt="Formula Foods branded trucker cap" loading="lazy">
+          </div>
+          <div class="tcard-body">
+            <div class="tcard-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <p class="tcard-text">"The hats were a hit with the team, we've already placed our second order!"</p>
+            <div class="tcard-meta">
+              <span class="tcard-name">Lynda Schubert</span>
+              <span class="tcard-company">Formula Foods</span>
+              <span class="tcard-product">Trucker Cap</span>
+            </div>
+          </div>
+        </div>
+        <div class="tcard">
+          <div class="tcard-img">
+            <img style="object-position: center 20%;" src="images/client-pixel-pop-tshirt.webp" alt="Pixel Pop branded t-shirt" loading="lazy">
+          </div>
+          <div class="tcard-body">
+            <div class="tcard-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <p class="tcard-text">"Easy process and great comms. Our staff love the new tees!"</p>
+            <div class="tcard-meta">
+              <span class="tcard-name">Mica O'Neill</span>
+              <span class="tcard-company">Pixel Pop</span>
+              <span class="tcard-product">Staff T-Shirt</span>
+            </div>
+          </div>
+        </div>
+        <div class="tcard">
+          <div class="tcard-img">
+            <img src="images/client-burlington-berries-cap.webp" alt="Burlington Berries branded cap" loading="lazy">
+          </div>
+          <div class="tcard-body">
+            <div class="tcard-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <p class="tcard-text">"Great team to work with, helped with many of our requests. Great quality hats too."</p>
+            <div class="tcard-meta">
+              <span class="tcard-name">Vanessa Alayo</span>
+              <span class="tcard-company">Burlington Berries</span>
+              <span class="tcard-product">Embroidered Cap</span>
+            </div>
+          </div>
+        </div>
+        <div class="tcard">
+          <div class="tcard-img">
+            <img src="images/client-southland-stags-stubby.webp" alt="Southland Stags branded stubby holder" loading="lazy">
+          </div>
+          <div class="tcard-body">
+            <div class="tcard-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <p class="tcard-text">"Great quality and fast delivery. Thank you from NZ!"</p>
+            <div class="tcard-meta">
+              <span class="tcard-name">Jason Herron</span>
+              <span class="tcard-company">Herron Accounting</span>
+              <span class="tcard-product">Stubby Holder</span>
+            </div>
+          </div>
+        </div>
+        <div class="tcard">
+          <div class="tcard-img">
+            <img src="images/client-johnson-real-estate-cap.webp" alt="Johnson Real Estate branded cap" loading="lazy">
+          </div>
+          <div class="tcard-body">
+            <div class="tcard-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <p class="tcard-text">"When the hats arrived, we were genuinely blown away by the quality and attention to detail. Couldn't be happier with the final product."</p>
+            <div class="tcard-meta">
+              <span class="tcard-name">Zanni Lewis</span>
+              <span class="tcard-company">Johnson Real Estate</span>
+              <span class="tcard-product">Embroidered Cap</span>
+            </div>
+          </div>
+        </div>
+        <div class="tcard">
+          <div class="tcard-img">
+            <img src="images/client-tcm-solutions-duffle.webp" alt="TCM Solutions branded duffle bag" loading="lazy">
+          </div>
+          <div class="tcard-body">
+            <div class="tcard-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <p class="tcard-text">"The bags are perfect, thank you!"</p>
+            <div class="tcard-meta">
+              <span class="tcard-name">Leia Pratten</span>
+              <span class="tcard-company">TCM Solutions</span>
+              <span class="tcard-product">Sports Bag</span>
+            </div>
+          </div>
+        </div>
+        <div class="tcard">
+          <div class="tcard-img">
+            <img src="images/client-formula-foods-trucker.webp" alt="Formula Foods branded trucker cap" loading="lazy">
+          </div>
+          <div class="tcard-body">
+            <div class="tcard-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <p class="tcard-text">"The hats were a hit with the team, we've already placed our second order!"</p>
+            <div class="tcard-meta">
+              <span class="tcard-name">Lynda Schubert</span>
+              <span class="tcard-company">Formula Foods</span>
+              <span class="tcard-product">Trucker Cap</span>
+            </div>
+          </div>
+        </div>
+        <div class="tcard">
+          <div class="tcard-img">
+            <img src="images/client-pixel-pop-tshirt.webp" alt="Pixel Pop branded t-shirt" loading="lazy">
+          </div>
+          <div class="tcard-body">
+            <div class="tcard-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <p class="tcard-text">"Easy process and great comms. Our staff love the new tees!"</p>
+            <div class="tcard-meta">
+              <span class="tcard-name">Mica O'Neill</span>
+              <span class="tcard-company">Pixel Pop</span>
+              <span class="tcard-product">Staff T-Shirt</span>
+            </div>
+          </div>
+        </div>
+        <div class="tcard">
+          <div class="tcard-img">
+            <img src="images/client-burlington-berries-cap.webp" alt="Burlington Berries branded cap" loading="lazy">
+          </div>
+          <div class="tcard-body">
+            <div class="tcard-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <p class="tcard-text">"Great team to work with, helped with many of our requests. Great quality hats too."</p>
+            <div class="tcard-meta">
+              <span class="tcard-name">Vanessa Alayo</span>
+              <span class="tcard-company">Burlington Berries</span>
+              <span class="tcard-product">Embroidered Cap</span>
+            </div>
+          </div>
+        </div>
+        <div class="tcard">
+          <div class="tcard-img">
+            <img src="images/client-southland-stags-stubby.webp" alt="Southland Stags branded stubby holder" loading="lazy">
+          </div>
+          <div class="tcard-body">
+            <div class="tcard-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#e6a817"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <p class="tcard-text">"Great quality and fast delivery. Thank you from NZ!"</p>
+            <div class="tcard-meta">
+              <span class="tcard-name">Jason Herron</span>
+              <span class="tcard-company">Herron Accounting</span>
+              <span class="tcard-product">Stubby Holder</span>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="products-inner">
+    <div class="products-header">
+      <div class="fade-up">
+        <div class="section-label">What We Supply</div>
+        <h2 class="section-title">Branded products for <em>every occasion</em></h2>
+      </div>
+      <p class="section-sub fade-up" style="transition-delay:0.1s">From corporate gifts to team apparel, we supply premium branded merchandise for businesses of all sizes, across every industry.</p>
+    </div>
+    <div class="product-grid">
+      <div class="product-card fade-up">
+        <div class="product-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.57a1 1 0 0 0 .99.86H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.86l.58-3.57a2 2 0 0 0-1.34-2.23z"/></svg></div>
+        <div class="product-name">Caps, Hats &amp; Apparel</div>
+        <p class="product-desc">Our core range. Custom embroidered headwear and workwear that represents your brand at every touchpoint.</p>
+      </div>
+      <div class="product-card fade-up" style="transition-delay:0.08s">
+        <div class="product-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
+        <div class="product-name">Corporate Gifts &amp; Client Packs</div>
+        <p class="product-desc">Curated branded packs for client appreciation, onboarding, and end-of-year gifting.</p>
+      </div>
+      <div class="product-card fade-up" style="transition-delay:0.16s">
+        <div class="product-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <div class="product-name">Event &amp; Campaign Merch</div>
+        <p class="product-desc">Conference packs, branded bags, lanyards, and giveaways that keep your brand visible long after the event.</p>
+      </div>
+      <div class="product-card fade-up" style="transition-delay:0.24s">
+        <div class="product-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+        <div class="product-name">Drinkware, Bags &amp; Tech</div>
+        <p class="product-desc">Everyday branded items: bottles, totes, and accessories that keep your logo front-of-mind.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- QUOTE FORM -->
+<section class="quote" id="quote">
+  <div class="quote-inner">
+    <div class="quote-left fade-up">
+      <div class="section-label" style="color:var(--light)">Get Started</div>
+      <h2 class="section-title">Request your <em>free quote</em></h2>
+      <p class="section-sub">Tell us what you need. We'll get back to you within 24 hours with a personalised quote, no obligation, no pressure.</p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <span class="c-icon">📧</span>
+          <div><a href="mailto:service@brandimade.com.au">service@brandimade.com.au</a></div>
+        </div>
+        <div class="contact-item">
+          <span class="c-icon">📞</span>
+          <div><a href="tel:0469757427">0469 757 427</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="quote-form fade-up" style="transition-delay:0.15s">
+      <form name="quote-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+        <input type="hidden" name="form-name" value="quote-request">
+        <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="qf-first-name">First Name *</label>
+            <input type="text" id="qf-first-name" name="first-name" placeholder="Jane" autocomplete="given-name" required>
+          </div>
+          <div class="form-group">
+            <label for="qf-last-name">Last Name *</label>
+            <input type="text" id="qf-last-name" name="last-name" placeholder="Smith" autocomplete="family-name" required>
+          </div>
+          <div class="form-group">
+            <label for="qf-business-name">Business Name</label>
+            <input type="text" id="qf-business-name" name="business-name" placeholder="Acme Pty Ltd" autocomplete="organization">
+          </div>
+          <div class="form-group">
+            <label for="qf-phone">Phone</label>
+            <input type="tel" id="qf-phone" name="phone" placeholder="04XX XXX XXX" autocomplete="tel">
+          </div>
+          <div class="form-group full">
+            <label for="qf-email">Email Address *</label>
+            <input type="email" id="qf-email" name="email" placeholder="jane@company.com.au" autocomplete="email" required>
+          </div>
+          <div class="form-group full">
+            <label for="qf-product-category">Product Category</label>
+            <select id="qf-product-category" name="product-category">
+              <option value="">Please select</option>
+              <option>Corporate Gifts &amp; Client Packs</option>
+              <option>Staff Uniforms &amp; Team Apparel</option>
+              <option>Event Merchandise &amp; Giveaways</option>
+              <option>Onboarding &amp; Welcome Kits</option>
+              <option>Drinkware, Bags &amp; Tech</option>
+              <option>Campaign &amp; Launch Merch</option>
+              <option>Not sure, help me choose</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="qf-referral-source">How did you hear about us?</label>
+            <select id="qf-referral-source" name="how-did-you-hear">
+              <option value="">Please select</option>
+              <option>Google Search</option>
+              <option>Social Media</option>
+              <option>Referral</option>
+              <option>Existing Customer</option>
+              <option>Word of Mouth</option>
+              <option>Event</option>
+              <option>Advertisement</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="qf-message">Tell us about your project *</label>
+            <textarea id="qf-message" name="message" placeholder="What are you looking for? Include quantities, timeline, budget range, or anything else helpful..." required></textarea>
+          </div>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn-primary">Send My Enquiry</button>
+          <p class="form-note">Response within 24 hours</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="https://images.squarespace-cdn.com/content/v1/6876314015f2f552f09dcf7e/cba38361-3b90-4ece-a3af-92b988dbea65/Screenshot_2025-10-19_at_8.58.09_am-removebg-preview.png?format=1500w" alt="Brandi Made">
+        <p>Premium promotional products for Australian businesses. Quality merchandise that stays in use and keeps your brand front-of-mind.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:service@brandimade.com.au">service@brandimade.com.au</a></li>
+          <li><a href="tel:0469757427">0469 757 427</a></li>
+          <li><a href="#quote">Request a Quote</a></li>
+                    <li><a href="referrals.html">Referral Program</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Brandi Made. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Fade-up animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+
+  // Hamburger menu
+  const _navToggle = document.getElementById('navToggle');
+  const _navMenu = document.getElementById('navMenu');
+  if (_navToggle && _navMenu) {
+    _navToggle.addEventListener('click', function() {
+      _navToggle.classList.toggle('open');
+      _navMenu.classList.toggle('open');
+      _navToggle.setAttribute('aria-expanded', _navMenu.classList.contains('open') ? 'true' : 'false');
+    });
+    _navMenu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        _navToggle.classList.remove('open');
+        _navMenu.classList.remove('open');
+        _navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>
+</body>
+</html>

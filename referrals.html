@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<title>Refer a Business &amp; Earn Rewards | Brandi Made Referral Program</title>
+<meta name="description" content="Refer an Australian business to Brandi Made and earn store credit when they place an order. No expiry. Simple referral program for promotional products and branded merchandise.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://brandimade.com.au/referrals.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Refer a Business &amp; Earn Rewards | Brandi Made Referral Program">
+<meta property="og:description" content="Refer an Australian business to Brandi Made and earn store credit when they place an order. No expiry. Simple referral program for promotional products and branded merchandise.">
+<meta property="og:url" content="https://brandimade.com.au/referrals.html">
+<meta property="og:site_name" content="Brandi Made">
+<meta property="og:locale" content="en_AU">
+<meta property="og:image" content="https://brandimade.com.au/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://brandimade.com.au/images/og-image.jpg">
+<meta name="twitter:title" content="Refer a Business &amp; Earn Rewards | Brandi Made Referral Program">
+<meta name="twitter:description" content="Refer an Australian business to Brandi Made and earn store credit when they place an order. No expiry. Simple referral program for promotional products and branded merchandise.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization"],
+      "@id": "https://brandimade.com.au/#organization",
+      "name": "Brandi Made",
+      "url": "https://brandimade.com.au/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://brandimade.com.au/#website",
+      "url": "https://brandimade.com.au/",
+      "name": "Brandi Made"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://brandimade.com.au/referrals.html",
+      "name": "Referral Program | Brandi Made",
+      "url": "https://brandimade.com.au/referrals.html",
+      "isPartOf": { "@id": "https://brandimade.com.au/#website" }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark: #152228;
+    --mid: #4e8098;
+    --light: #bbd2e4;
+    --red: #a31621;
+    --offwhite: #f5f2ee;
+    --white: #ffffff;
+    --text-dark: #1a2d35;
+    --text-mid: #4a5e66;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; color: var(--text-dark); background: var(--white); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(21,34,40,0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(187,210,228,0.12);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%; height: 72px;
+  }
+  nav .logo img { height: 36px; filter: brightness(0) invert(1); opacity: 0.92; }
+  nav ul { list-style: none; display: flex; gap: 36px; align-items: center; }
+  nav ul a {
+    font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: rgba(255,255,255,0.72);
+    text-decoration: none; transition: color 0.2s;
+  }
+  nav ul a:hover { color: var(--light); }
+  nav .nav-cta { background: var(--red); color: white !important; padding: 10px 22px; border-radius: 2px; }
+  nav .nav-cta:hover { background: #c01c2a !important; }
+
+  .nav-hamburger { display: none; }
+
+  /* PAGE HEADER */
+  .page-header {
+    background: var(--dark);
+    padding: 140px 5% 80px;
+    position: relative; overflow: hidden;
+  }
+  .page-header::before {
+    content: ''; position: absolute; top: -20%; right: -5%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(78,128,152,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .page-header-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; }
+  .page-label {
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--mid); margin-bottom: 16px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .page-label::before { content: ''; width: 24px; height: 1px; background: var(--mid); display: block; }
+  .page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 4vw, 3.4rem);
+    font-weight: 700; color: white; line-height: 1.15; margin-bottom: 16px;
+  }
+  .page-header h1 em { font-style: normal; color: var(--light); }
+  .page-header p { font-size: 1rem; color: rgba(255,255,255,0.55); max-width: 520px; line-height: 1.7; }
+
+  /* HOW IT WORKS */
+  .how-section { background: var(--offwhite); padding: 90px 5%; }
+  .how-inner { max-width: 1200px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--mid); margin-bottom: 16px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .section-label::before { content: ''; width: 24px; height: 1px; background: var(--mid); display: block; }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 700; color: var(--dark); margin-bottom: 52px; line-height: 1.2;
+  }
+  .section-title em { font-style: normal; color: var(--mid); }
+
+  .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(21,34,40,0.07); }
+  .step {
+    background: var(--white); padding: 44px 36px;
+    position: relative; transition: background 0.25s;
+  }
+  .step:hover { background: var(--dark); }
+  .step:hover .step-num { color: rgba(255,255,255,0.06); }
+  .step:hover .step-title { color: white; }
+  .step:hover .step-text { color: rgba(255,255,255,0.55); }
+  .step:hover .step-icon { background: rgba(78,128,152,0.2); color: var(--light); }
+  .step-num {
+    font-family: 'Playfair Display', serif; font-size: 4.5rem;
+    font-weight: 700; color: rgba(21,34,40,0.05); line-height: 1;
+    position: absolute; top: 24px; right: 28px; transition: color 0.25s;
+  }
+  .step-icon {
+    width: 52px; height: 52px; background: rgba(78,128,152,0.1); border-radius: 2px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--mid); margin-bottom: 24px; transition: background 0.25s, color 0.25s;
+  }
+  .step-title {
+    font-family: 'Playfair Display', serif; font-size: 1.15rem;
+    font-weight: 600; color: var(--dark); margin-bottom: 12px; transition: color 0.25s;
+  }
+  .step-text { font-size: 0.9rem; line-height: 1.7; color: var(--text-mid); transition: color 0.25s; }
+  .step-text strong { font-weight: 600; }
+
+  /* REWARD HIGHLIGHT */
+  .reward-strip { background: var(--dark); padding: 72px 5%; }
+  .reward-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+    background: rgba(187,210,228,0.06);
+  }
+  .reward-box {
+    background: rgba(21,34,40,0.7); padding: 48px 40px;
+    border: 1px solid rgba(187,210,228,0.08);
+  }
+  .reward-box .reward-amount {
+    font-family: 'Playfair Display', serif; font-size: 3.2rem;
+    font-weight: 700; color: var(--light); line-height: 1; margin-bottom: 12px;
+  }
+  .reward-box .reward-who {
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--mid); margin-bottom: 16px;
+  }
+  .reward-box p { font-size: 0.9rem; line-height: 1.7; color: rgba(255,255,255,0.5); }
+
+  /* QUALIFY */
+  .qualify-section { background: var(--white); padding: 90px 5%; }
+  .qualify-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .qualify-list { display: flex; flex-direction: column; gap: 20px; margin-top: 32px; }
+  .qualify-item {
+    display: flex; gap: 16px; align-items: flex-start;
+    padding: 20px 24px; border: 1px solid rgba(21,34,40,0.08);
+    transition: border-color 0.2s;
+  }
+  .qualify-item:hover { border-color: var(--mid); }
+  .qualify-num {
+    font-family: 'Playfair Display', serif; font-size: 1.4rem;
+    font-weight: 700; color: var(--light); flex-shrink: 0; line-height: 1; margin-top: 2px;
+    min-width: 28px;
+  }
+  .qualify-item p { font-size: 0.9rem; line-height: 1.7; color: var(--text-mid); }
+  .qualify-item p strong { color: var(--text-dark); font-weight: 600; }
+
+  /* REFERRAL FORM */
+  .form-section { background: var(--dark); padding: 90px 5%; }
+  .form-inner { max-width: 860px; margin: 0 auto; }
+  .form-inner .section-label { color: var(--light); }
+  .form-inner .section-label::before { background: var(--light); }
+  .form-inner .section-title { color: white; margin-bottom: 12px; }
+  .form-sub { font-size: 1rem; color: rgba(255,255,255,0.5); margin-bottom: 44px; line-height: 1.7; }
+
+  .ref-form { background: rgba(255,255,255,0.04); border: 1px solid rgba(187,210,228,0.12); padding: 48px 44px; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 8px; }
+  .form-group.full { grid-column: 1 / -1; }
+  .form-group label {
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: rgba(255,255,255,0.5);
+  }
+  .form-group input, .form-group textarea {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(187,210,228,0.15);
+    padding: 14px 18px; font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem; color: white; outline: none; transition: border-color 0.2s; width: 100%;
+  }
+  .form-group input:focus, .form-group textarea:focus { border-color: var(--mid); }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+
+  .divider {
+    display: flex; align-items: center; gap: 16px;
+    margin: 8px 0; color: rgba(255,255,255,0.2); font-size: 0.75rem;
+    text-transform: uppercase; letter-spacing: 0.1em;
+  }
+  .divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: rgba(187,210,228,0.12); }
+
+  .btn-primary {
+    background: var(--red); color: white; padding: 16px 36px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none;
+    border: none; cursor: pointer; display: inline-block; transition: background 0.2s;
+  }
+  .btn-primary:hover { background: #c01c2a; }
+
+  .form-submit { display: flex; align-items: center; gap: 20px; margin-top: 24px; }
+  .form-note { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+  .form-success {
+    display: none; background: rgba(78,128,152,0.15);
+    border: 1px solid rgba(78,128,152,0.35); padding: 20px 24px;
+    margin-top: 20px; color: var(--light); font-size: 0.9rem; text-align: center;
+  }
+
+  /* TERMS */
+  .terms-section { background: var(--offwhite); padding: 90px 5%; }
+  .terms-inner { max-width: 860px; margin: 0 auto; }
+  .terms-inner .section-title { margin-bottom: 40px; }
+
+  .terms-group { margin-bottom: 36px; }
+  .terms-group h3 {
+    font-family: 'Playfair Display', serif; font-size: 1rem;
+    font-weight: 600; color: var(--dark); margin-bottom: 12px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .terms-group h3 span {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 24px; height: 24px; background: var(--mid); border-radius: 2px;
+    color: white; font-size: 0.72rem; font-weight: 700; flex-shrink: 0;
+  }
+  .terms-group ul, .terms-group p { font-size: 0.875rem; line-height: 1.8; color: var(--text-mid); }
+  .terms-group ul { padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; }
+  .terms-group ul li { padding-left: 16px; position: relative; }
+  .terms-group ul li::before { content: ', '; position: absolute; left: 0; color: var(--mid); }
+  .terms-group ul li strong { color: var(--text-dark); font-weight: 600; }
+
+  /* FOOTER */
+  footer { background: #0d1b21; padding: 60px 5% 32px; border-top: 1px solid rgba(187,210,228,0.08); }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 52px; }
+  .footer-brand img { height: 28px; filter: brightness(0) invert(1); opacity: 0.7; margin-bottom: 20px; }
+  .footer-brand p { font-size: 0.85rem; line-height: 1.75; color: rgba(255,255,255,0.38); max-width: 280px; }
+  .footer-col h4 { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 20px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul li a { font-size: 0.875rem; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
+  .footer-col ul li a:hover { color: var(--light); }
+  .footer-bottom { border-top: 1px solid rgba(187,210,228,0.07); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
+  .footer-tagline { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.85rem; color: rgba(255,255,255,0.3); }
+
+  /* RESPONSIVE */
+  @media (max-width: 800px) {
+    .steps-grid, .reward-inner, .qualify-inner { grid-template-columns: 1fr; }
+    .form-grid { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; gap: 32px; }
+    nav ul { display: none; }
+    nav ul.open {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 72px; left: 0; right: 0;
+      background: rgba(21,34,40,0.98);
+      padding: 24px 5% 32px;
+      gap: 0;
+      z-index: 99;
+      border-bottom: 1px solid rgba(187,210,228,0.15);
+    }
+    nav ul.open li { border-bottom: 1px solid rgba(255,255,255,0.07); }
+    nav ul.open li a {
+      display: block;
+      padding: 14px 0;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+    }
+    nav ul.open .nav-cta {
+      margin-top: 12px;
+      display: inline-block;
+      padding: 12px 24px !important;
+    }
+    .nav-hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: none;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: rgba(255,255,255,0.85);
+      border-radius: 2px;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    nav .logo { position: absolute; left: 50%; transform: translateX(-50%); }
+    .ref-form { padding: 32px 24px; }
+  }
+
+  /* ── Mobile polish (≤480px) ── */
+  @media (max-width: 480px) {
+    html { font-size: 15px; }
+    body { overflow-x: hidden; }
+    nav { padding: 0 4%; }
+    nav .logo img { height: 22px; }
+    .page-header { padding: 80px 5% 48px; }
+    .page-header h1 { font-size: clamp(1.8rem, 6vw, 2.4rem); }
+    h1, h2 { word-break: break-word; }
+    .section-title { font-size: clamp(1.6rem, 5vw, 2rem); }
+    .footer-top { grid-template-columns: 1fr !important; gap: 28px !important; }
+    .footer-col ul li a,
+    .footer-col ul li a:link { min-height: 44px; display: flex; align-items: center; }
+    img { max-width: 100%; height: auto; }
+    table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    /* FAQ */
+    .faq-answer { max-height: none; }
+    .faq-item.open .faq-answer { max-height: 600px; }
+    /* Supplier cards */
+    .supplier-card { flex-direction: column; }
+    /* Reward boxes */
+    .reward-box { padding: 24px 20px; }
+  }
+
+  .skip-link { position: absolute; left: -9999px; top: 0; z-index: 300; background: #152228; color: #fff; padding: 12px 20px; font-size: 0.85rem; }
+  .skip-link:focus { left: 0; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- NAV -->
+<nav aria-label="Main navigation">
+  <button class="nav-hamburger" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="logo"><a href="index.html"><img src="https://images.squarespace-cdn.com/content/v1/6876314015f2f552f09dcf7e/cba38361-3b90-4ece-a3af-92b988dbea65/Screenshot_2025-10-19_at_8.58.09_am-removebg-preview.png?format=1500w" alt="Brandi Made"></a></div>
+  <ul id="navMenu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="how-it-works.html">How It Works</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="faq.html">FAQs</a></li>
+    <li><a href="referrals.html">Referrals</a></li>
+    <li><a href="index.html#quote" class="nav-cta">Get a Quote</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-label">Referral Program</div>
+    <h1>Spread the word.<br><em>Get rewarded.</em></h1>
+    <p>Help another brand find their fit, and we'll reward you both with $100 in credit or gift card toward your next orders.</p>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+  <div class="how-inner">
+    <div class="section-label">How It Works</div>
+    <h2 class="section-title">Simple. Rewarding. <em>No expiry.</em></h2>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+        </div>
+        <div class="step-title">Share the Word</div>
+        <p class="step-text">Refer another business, team, or friend who needs branded merchandise. Just make sure they <strong>mention your full name and company</strong> when they enquire.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <div class="step-title">They Place an Order</div>
+        <p class="step-text">When your referral places their first order of <strong>50 units or more</strong>, they receive <strong>$100 credit</strong> applied immediately. You get notified once it's confirmed.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="step-title">Enjoy the Rewards</div>
+        <p class="step-text">You receive a <strong>$100 credit</strong> toward your next order or a <strong>$100 EFTPOS gift card</strong>. There's no expiry, use it whenever you're ready.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REWARD HIGHLIGHT -->
+<div class="reward-strip">
+  <div class="reward-inner">
+    <div class="reward-box">
+      <div class="reward-amount">$100</div>
+      <div class="reward-who">For You, The Referrer</div>
+      <p>Credit toward your next Brandi Made order, or a $100 EFTPOS gift card. Your choice, no expiry, redeemable any time.</p>
+    </div>
+    <div class="reward-box">
+      <div class="reward-amount">$100</div>
+      <div class="reward-who">For Your Referral</div>
+      <p>$100 credit applied directly to their first order of 50+ units. A great way to give someone a better deal from day one.</p>
+    </div>
+  </div>
+</div>
+
+<!-- TO QUALIFY -->
+<section class="qualify-section">
+  <div class="qualify-inner">
+    <div>
+      <div class="section-label">Eligibility</div>
+      <h2 class="section-title">To <em>qualify</em></h2>
+      <p style="font-size:0.95rem; line-height:1.75; color:var(--text-mid); margin-top: 16px;">Open to all existing Brandi Made customers. There's no limit to how many referrals you can make, credits stack and can be combined toward a single order.</p>
+    </div>
+    <div class="qualify-list">
+      <div class="qualify-item">
+        <div class="qualify-num">1</div>
+        <p>The referred client must <strong>clearly mention your full name and company name</strong> at the time of enquiry, before confirming their first order.</p>
+      </div>
+      <div class="qualify-item">
+        <div class="qualify-num">2</div>
+        <p>Referrals claimed <strong>after</strong> an order is placed cannot be retrospectively applied. Mention it early.</p>
+      </div>
+      <div class="qualify-item">
+        <div class="qualify-num">3</div>
+        <p>The referred client must be a <strong>new Brandi Made customer</strong>, not previously ordered under any name or company.</p>
+      </div>
+      <div class="qualify-item">
+        <div class="qualify-num">4</div>
+        <p>Submit via the referral form below, or <strong>mention it directly in your enquiry email</strong> to <a href="mailto:service@brandimade.com.au">service@brandimade.com.au</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REFERRAL FORM -->
+<section class="form-section" id="refer">
+  <div class="form-inner">
+    <div class="section-label">Submit a Referral</div>
+    <h2 class="section-title">Refer someone <em>now</em></h2>
+    <p class="form-sub">Fill in the details below and we'll take it from there. We'll be in touch once their order is confirmed.</p>
+    <div class="ref-form">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Your First Name *</label>
+          <input type="text" id="your-fname" placeholder="Jane">
+        </div>
+        <div class="form-group">
+          <label>Your Last Name *</label>
+          <input type="text" id="your-lname" placeholder="Smith">
+        </div>
+        <div class="form-group">
+          <label>Your Company *</label>
+          <input type="text" id="your-company" placeholder="Acme Pty Ltd">
+        </div>
+        <div class="form-group">
+          <label>Your Email *</label>
+          <input type="email" id="your-email" placeholder="jane@company.com.au">
+        </div>
+      </div>
+
+      <div class="divider">Referral's details</div>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Their Name *</label>
+          <input type="text" id="ref-name" placeholder="Alex Johnson">
+        </div>
+        <div class="form-group">
+          <label>Their Company *</label>
+          <input type="text" id="ref-company" placeholder="Their Business Pty Ltd">
+        </div>
+        <div class="form-group full">
+          <label>Their Email or Phone *</label>
+          <input type="text" id="ref-contact" placeholder="alex@theirbusiness.com.au or 04XX XXX XXX">
+        </div>
+        <div class="form-group full">
+          <label>Anything else we should know?</label>
+          <textarea id="ref-notes" placeholder="e.g. what they're looking for, when they need it..."></textarea>
+        </div>
+      </div>
+
+      <div class="form-submit">
+        <button class="btn-primary" onclick="submitReferral()">Submit Referral</button>
+        <p class="form-note">We'll confirm receipt within 24 hours</p>
+      </div>
+      <div class="form-success" id="refSuccess">
+        ✅ Referral submitted! We'll be in touch within 24 hours to confirm.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TERMS -->
+<section class="terms-section" id="terms">
+  <div class="terms-inner">
+    <div class="section-label">Legal</div>
+    <h2 class="section-title">Referral Rewards, <em>Terms & Conditions</em></h2>
+
+    <div class="terms-group">
+      <h3><span>1</span> Eligibility</h3>
+      <ul>
+        <li>The Program is open to all existing Brandi Made customers.</li>
+        <li>A "Referrer" is any current or past Brandi Made customer who introduces a new client to Brandi Made.</li>
+        <li>The Referred Client must be a <strong>new customer</strong> who has not previously placed an order with Brandi Made under any name or company.</li>
+      </ul>
+    </div>
+
+    <div class="terms-group">
+      <h3><span>2</span> Referral Reward</h3>
+      <ul>
+        <li>When a Referred Client places their first order of <strong>50 units or more</strong>, both parties receive a <strong>$100 credit</strong> toward a future order.</li>
+        <li>The Referred Client can only receive $100 credit, gift card credits are not eligible for referred clients.</li>
+        <li>Credits are applied as a deduction from total order value, <strong>exclusive of GST and shipping</strong>.</li>
+        <li>There is <strong>no expiry date</strong> on referral credits.</li>
+      </ul>
+    </div>
+
+    <div class="terms-group">
+      <h3><span>3</span> How to Qualify</h3>
+      <ul>
+        <li>The Referred Client must <strong>clearly mention the Referrer's full name and company name</strong> at the time of enquiry or before confirming their first order.</li>
+        <li>Referrals claimed after an order is placed <strong>cannot be retrospectively applied</strong>.</li>
+        <li>Referrals may be submitted via the Referral Form on this page, or mentioned directly in an enquiry email.</li>
+      </ul>
+    </div>
+
+    <div class="terms-group">
+      <h3><span>4</span> Multiple Referrals</h3>
+      <ul>
+        <li>There is <strong>no limit</strong> to the number of referrals a customer can make.</li>
+        <li>Credits are earned per successful referral and can be <strong>combined</strong> toward a single future order.</li>
+      </ul>
+    </div>
+
+    <div class="terms-group">
+      <h3><span>5</span> Credit Use</h3>
+      <ul>
+        <li>Referral credits can only be used for <strong>Brandi Made products and services</strong>.</li>
+        <li>Credits are <strong>non-transferable</strong> and have no cash value.</li>
+        <li>Either a $100 credit toward your order or a $100 EFTPOS gift card can be chosen once the referral is approved.</li>
+      </ul>
+    </div>
+
+    <div class="terms-group">
+      <h3><span>6</span> Program Modifications</h3>
+      <ul>
+        <li>Brandi Made reserves the right to amend or end the Program at any time without prior notice.</li>
+        <li>Any changes will not affect credits already earned prior to the date of change.</li>
+      </ul>
+    </div>
+
+    <div class="terms-group">
+      <h3><span>7</span> Fair Use</h3>
+      <ul>
+        <li>Brandi Made reserves the right to decline or revoke credits if there is evidence of misuse, self-referral, or fraudulent activity.</li>
+        <li>Decisions made by Brandi Made regarding eligibility or disputes are <strong>final</strong>.</li>
+      </ul>
+    </div>
+
+    <div class="terms-group">
+      <h3><span>8</span> Contact</h3>
+      <p>For any questions regarding referral eligibility or credit application, contact <a href="mailto:service@brandimade.com.au">service@brandimade.com.au</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="https://images.squarespace-cdn.com/content/v1/6876314015f2f552f09dcf7e/cba38361-3b90-4ece-a3af-92b988dbea65/Screenshot_2025-10-19_at_8.58.09_am-removebg-preview.png?format=1500w" alt="Brandi Made">
+        <p>Premium promotional products for Australian businesses. Quality merchandise that stays in use, and keeps your brand front-of-mind.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:service@brandimade.com.au">service@brandimade.com.au</a></li>
+          <li><a href="tel:0469757427">0469 757 427</a></li>
+          <li><a href="index.html#quote">Request a Quote</a></li>
+          <li><a href="referrals.html">Referral Program</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Brandi Made. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Hamburger menu
+  (function() {
+    var toggle = document.getElementById('navToggle');
+    var menu = document.getElementById('navMenu');
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', function() {
+      toggle.classList.toggle('open');
+      menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', menu.classList.contains('open') ? 'true' : 'false');
+    });
+    menu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        toggle.classList.remove('open');
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2 @@
+# Redirect Netlify subdomain to custom domain
+https://brandimade.netlify.app/* https://brandimade.com.au/:splat 301!

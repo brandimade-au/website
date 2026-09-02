@@ -1,0 +1,39 @@
+# === Brandi Made website ===
+# This is a plain static HTML/CSS/JS site with no build step.
+# Everything the site needs MUST be committed. Only junk and secrets are ignored.
+
+# macOS clutter
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows clutter
+Thumbs.db
+Desktop.ini
+
+# Editor / IDE folders
+.vscode/
+.idea/
+*.swp
+*~
+
+# Secrets — never commit these
+.env
+.env.*
+*.pem
+*.key
+secrets.json
+
+# Netlify CLI local state
+.netlify/
+
+# Node (not used today, but ignore it if it ever appears)
+node_modules/
+npm-debug.log*
+
+# Local scratch files
+/tmp/
+*.bak
+*.orig
