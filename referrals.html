@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="images/favicon.png">
-<title>Refer a Business &amp; Earn Rewards | Brandi Made Referral Program</title>
-<meta name="description" content="Refer an Australian business to Brandi Made and earn store credit when they place an order. No expiry. Simple referral program for promotional products and branded merchandise.">
+<title>Refer a Business &amp; Earn Rewards | Brandi Made Referrals</title>
+<meta name="description" content="Refer an Australian business to Brandi Made: you get a $120 EFTPOS gift card, they get $100 off their first order. No expiry.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://brandimade.com.au/referrals.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Refer a Business &amp; Earn Rewards | Brandi Made Referral Program">
-<meta property="og:description" content="Refer an Australian business to Brandi Made and earn store credit when they place an order. No expiry. Simple referral program for promotional products and branded merchandise.">
+<meta property="og:title" content="Refer a Business &amp; Earn Rewards | Brandi Made Referrals">
+<meta property="og:description" content="Refer an Australian business to Brandi Made: you get a $120 EFTPOS gift card, they get $100 off their first order. No expiry.">
 <meta property="og:url" content="https://brandimade.com.au/referrals.html">
 <meta property="og:site_name" content="Brandi Made">
 <meta property="og:locale" content="en_AU">
@@ -19,8 +19,8 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://brandimade.com.au/images/og-image.jpg">
-<meta name="twitter:title" content="Refer a Business &amp; Earn Rewards | Brandi Made Referral Program">
-<meta name="twitter:description" content="Refer an Australian business to Brandi Made and earn store credit when they place an order. No expiry. Simple referral program for promotional products and branded merchandise.">
+<meta name="twitter:title" content="Refer a Business &amp; Earn Rewards | Brandi Made Referrals">
+<meta name="twitter:description" content="Refer an Australian business to Brandi Made: you get a $120 EFTPOS gift card, they get $100 off their first order. No expiry.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -115,6 +115,19 @@
   .page-header h1 em { font-style: normal; color: var(--light); }
   .page-header p { font-size: 1rem; color: rgba(255,255,255,0.55); max-width: 520px; line-height: 1.7; }
 
+  .hero-rewards { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .hero-reward {
+    display: flex; align-items: center; gap: 14px;
+    background: rgba(187,210,228,0.04); border: 1px solid rgba(187,210,228,0.18);
+    padding: 14px 20px;
+  }
+  .hero-reward svg { color: var(--light); flex-shrink: 0; }
+  .hero-reward span { font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.5; }
+  .hero-reward strong {
+    display: block; font-family: 'Playfair Display', serif;
+    font-size: 1.05rem; font-weight: 700; color: white;
+  }
+
   /* HOW IT WORKS */
   .how-section { background: var(--offwhite); padding: 90px 5%; }
   .how-inner { max-width: 1200px; margin: 0 auto; }
@@ -178,6 +191,23 @@
     text-transform: uppercase; color: var(--mid); margin-bottom: 16px;
   }
   .reward-box p { font-size: 0.9rem; line-height: 1.7; color: rgba(255,255,255,0.5); }
+  .reward-icon {
+    width: 48px; height: 48px; background: rgba(187,210,228,0.08); border-radius: 2px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--light); margin-bottom: 22px;
+  }
+
+  /* SPEND IT ON */
+  .spend-section { background: var(--offwhite); padding: 80px 5%; }
+  .spend-inner { max-width: 1200px; margin: 0 auto; }
+  .spend-inner .section-title { margin-bottom: 36px; }
+  .spend-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: rgba(21,34,40,0.07); }
+  .spend-item { background: var(--white); }
+  .spend-item img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+  .spend-item figcaption {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-mid); padding: 16px 18px; text-align: center;
+  }
 
   /* QUALIFY */
   .qualify-section { background: var(--white); padding: 90px 5%; }
@@ -196,6 +226,8 @@
   }
   .qualify-item p { font-size: 0.9rem; line-height: 1.7; color: var(--text-mid); }
   .qualify-item p strong { color: var(--text-dark); font-weight: 600; }
+  .qualify-photo { margin-top: 32px; }
+  .qualify-photo img { display: block; width: 100%; height: 280px; object-fit: cover; }
 
   /* REFERRAL FORM */
   .form-section { background: var(--dark); padding: 90px 5%; }
@@ -284,6 +316,7 @@
   /* RESPONSIVE */
   @media (max-width: 800px) {
     .steps-grid, .reward-inner, .qualify-inner { grid-template-columns: 1fr; }
+    .spend-grid { grid-template-columns: 1fr 1fr; }
     .form-grid { grid-template-columns: 1fr; }
     .footer-top { grid-template-columns: 1fr; gap: 32px; }
     nav ul { display: none; }
@@ -357,6 +390,7 @@
     .supplier-card { flex-direction: column; }
     /* Reward boxes */
     .reward-box { padding: 24px 20px; }
+    .qualify-photo img { height: 200px; }
   }
 
   .skip-link { position: absolute; left: -9999px; top: 0; z-index: 300; background: #152228; color: #fff; padding: 12px 20px; font-size: 0.85rem; }
@@ -395,7 +429,17 @@
   <div class="page-header-inner">
     <div class="page-label">Referral Program</div>
     <h1>Spread the word.<br><em>Get rewarded.</em></h1>
-    <p>Help another brand find their fit, and we'll reward you both with $100 in credit or gift card toward your next orders.</p>
+    <p>Refer a business. You get $120, they get $100.</p>
+    <div class="hero-rewards">
+      <div class="hero-reward">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        <span><strong>You get $120</strong>EFTPOS gift card</span>
+      </div>
+      <div class="hero-reward">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+        <span><strong>They get $100</strong>off their first order</span>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -408,10 +452,10 @@
       <div class="step">
         <div class="step-num">01</div>
         <div class="step-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
         </div>
         <div class="step-title">Share the Word</div>
-        <p class="step-text">Refer another business, team, or friend who needs branded merchandise. Just make sure they <strong>mention your full name and company</strong> when they enquire.</p>
+        <p class="step-text">Refer a business that needs branded merch. They <strong>mention your name and company</strong> when they enquire.</p>
       </div>
       <div class="step">
         <div class="step-num">02</div>
@@ -419,15 +463,15 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
         </div>
         <div class="step-title">They Place an Order</div>
-        <p class="step-text">When your referral places their first order of <strong>50 units or more</strong>, they receive <strong>$100 credit</strong> applied immediately. You get notified once it's confirmed.</p>
+        <p class="step-text">Their first order of <strong>50+ units</strong> gets <strong>$100 off</strong> straight away.</p>
       </div>
       <div class="step">
         <div class="step-num">03</div>
         <div class="step-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
         </div>
         <div class="step-title">Enjoy the Rewards</div>
-        <p class="step-text">You receive a <strong>$100 credit</strong> toward your next order or a <strong>$100 EFTPOS gift card</strong>. There's no expiry, use it whenever you're ready.</p>
+        <p class="step-text">Your <strong>$120 EFTPOS gift card</strong> follows, or take it as credit. No expiry.</p>
       </div>
     </div>
   </div>
@@ -437,17 +481,45 @@
 <div class="reward-strip">
   <div class="reward-inner">
     <div class="reward-box">
-      <div class="reward-amount">$100</div>
+      <div class="reward-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+      <div class="reward-amount">$120</div>
       <div class="reward-who">For You, The Referrer</div>
-      <p>Credit toward your next Brandi Made order, or a $100 EFTPOS gift card. Your choice, no expiry, redeemable any time.</p>
+      <p>An <strong>EFTPOS gift card</strong> once their first order is confirmed, or $120 off your next order. No expiry.</p>
     </div>
     <div class="reward-box">
+      <div class="reward-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div>
       <div class="reward-amount">$100</div>
-      <div class="reward-who">For Your Referral</div>
-      <p>$100 credit applied directly to their first order of 50+ units. A great way to give someone a better deal from day one.</p>
+      <div class="reward-who">For The Business You Refer</div>
+      <p><strong>Off their first order</strong> of 50+ units, applied on the spot.</p>
     </div>
   </div>
 </div>
+
+<!-- SPEND IT ON -->
+<section class="spend-section">
+  <div class="spend-inner">
+    <div class="section-label">Put It Toward</div>
+    <h2 class="section-title">Spend it on <em>anything we make</em></h2>
+    <div class="spend-grid">
+      <figure class="spend-item">
+        <img src="images/product-embroidered-cap.webp" alt="Embroidered cap" loading="lazy">
+        <figcaption>Caps</figcaption>
+      </figure>
+      <figure class="spend-item">
+        <img src="images/product-staff-polo.webp" alt="Branded staff polo shirt" loading="lazy">
+        <figcaption>Polos &amp; Tees</figcaption>
+      </figure>
+      <figure class="spend-item">
+        <img src="images/product-canvas-tote.webp" alt="Branded canvas tote bag" loading="lazy">
+        <figcaption>Totes</figcaption>
+      </figure>
+      <figure class="spend-item">
+        <img src="images/product-sports-duffle.webp" alt="Branded sports duffle bag" loading="lazy">
+        <figcaption>Bags</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
 <!-- TO QUALIFY -->
 <section class="qualify-section">
@@ -455,24 +527,27 @@
     <div>
       <div class="section-label">Eligibility</div>
       <h2 class="section-title">To <em>qualify</em></h2>
-      <p style="font-size:0.95rem; line-height:1.75; color:var(--text-mid); margin-top: 16px;">Open to all existing Brandi Made customers. There's no limit to how many referrals you can make, credits stack and can be combined toward a single order.</p>
+      <p style="font-size:0.95rem; line-height:1.75; color:var(--text-mid); margin-top: 16px;">Open to all Brandi Made customers. Refer as many businesses as you like, credits stack.</p>
+      <div class="qualify-photo">
+        <img src="images/hero-caps.webp" alt="Branded caps made for Australian businesses" loading="lazy">
+      </div>
     </div>
     <div class="qualify-list">
       <div class="qualify-item">
         <div class="qualify-num">1</div>
-        <p>The referred client must <strong>clearly mention your full name and company name</strong> at the time of enquiry, before confirming their first order.</p>
+        <p>They <strong>mention your name and company</strong> when they enquire.</p>
       </div>
       <div class="qualify-item">
         <div class="qualify-num">2</div>
-        <p>Referrals claimed <strong>after</strong> an order is placed cannot be retrospectively applied. Mention it early.</p>
+        <p>Claim it <strong>before</strong> their order is placed, not after.</p>
       </div>
       <div class="qualify-item">
         <div class="qualify-num">3</div>
-        <p>The referred client must be a <strong>new Brandi Made customer</strong>, not previously ordered under any name or company.</p>
+        <p>They're a <strong>new Brandi Made customer</strong>.</p>
       </div>
       <div class="qualify-item">
         <div class="qualify-num">4</div>
-        <p>Submit via the referral form below, or <strong>mention it directly in your enquiry email</strong> to <a href="mailto:service@brandimade.com.au">service@brandimade.com.au</a>.</p>
+        <p>Use the <strong>form below</strong>, or email <a href="mailto:service@brandimade.com.au">service@brandimade.com.au</a>.</p>
       </div>
     </div>
   </div>
@@ -483,7 +558,7 @@
   <div class="form-inner">
     <div class="section-label">Submit a Referral</div>
     <h2 class="section-title">Refer someone <em>now</em></h2>
-    <p class="form-sub">Fill in the details below and we'll take it from there. We'll be in touch once their order is confirmed.</p>
+    <p class="form-sub">Fill in the details and we'll take it from there.</p>
     <form class="ref-form" name="referral" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
       <input type="hidden" name="form-name" value="referral">
       <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
@@ -556,8 +631,9 @@
     <div class="terms-group">
       <h3><span>2</span> Referral Reward</h3>
       <ul>
-        <li>When a Referred Client places their first order of <strong>50 units or more</strong>, both parties receive a <strong>$100 credit</strong> toward a future order.</li>
-        <li>The Referred Client can only receive $100 credit, gift card credits are not eligible for referred clients.</li>
+        <li>When a Referred Client places their first order of <strong>50 units or more</strong>, <strong>both parties are rewarded</strong>.</li>
+        <li>The <strong>Referrer</strong> receives a <strong>$120 EFTPOS gift card</strong>, or a $120 credit toward their next Brandi Made order if they prefer.</li>
+        <li>The <strong>Referred Client</strong> receives <strong>$100 off their first order</strong>. Gift cards are not available to Referred Clients.</li>
         <li>Credits are applied as a deduction from total order value, <strong>exclusive of GST and shipping</strong>.</li>
         <li>There is <strong>no expiry date</strong> on referral credits.</li>
       </ul>
@@ -585,7 +661,7 @@
       <ul>
         <li>Referral credits can only be used for <strong>Brandi Made products and services</strong>.</li>
         <li>Credits are <strong>non-transferable</strong> and have no cash value.</li>
-        <li>Either a $100 credit toward your order or a $100 EFTPOS gift card can be chosen once the referral is approved.</li>
+        <li>Referrers choose between the $120 EFTPOS gift card and the $120 order credit once the referral is approved.</li>
       </ul>
     </div>
 
