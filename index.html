@@ -460,63 +460,88 @@
   .how-steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    background: rgba(21,34,40,0.08);
+    gap: 40px;
   }
 
   .step {
-    background: var(--white);
-    padding: 48px 36px;
+    background: rgba(187,210,228,0.3);
+    border-radius: 16px;
+    padding: 28px 32px 40px;
     position: relative;
-    transition: background 0.25s;
   }
 
-  .step:hover { background: var(--dark); }
-  .step:hover .step-num { color: rgba(255,255,255,0.15); }
-  .step:hover .step-title { color: white; }
-  .step:hover .step-text { color: rgba(255,255,255,0.6); }
-  .step:hover .step-icon { background: rgba(78,128,152,0.2); color: var(--light); }
+  .step:nth-child(2) { background: rgba(21,34,40,0.035); }
+
+  /* Arrow between steps */
+  .step:not(:last-child)::after {
+    content: '\2192';
+    position: absolute;
+    top: 100px;
+    right: -30px;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: var(--mid);
+    opacity: 0.6;
+  }
+
+  .step-media {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .step-media-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .step-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    mix-blend-mode: multiply;
+  }
 
   .step-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 4.5rem;
-    font-weight: 700;
-    color: rgba(21,34,40,0.06);
-    line-height: 1;
-    position: absolute;
-    top: 24px;
-    right: 28px;
-    transition: color 0.25s;
-  }
-
-  .step-icon {
     width: 52px;
     height: 52px;
-    background: rgba(78,128,152,0.1);
-    border-radius: 2px;
+    border-radius: 50%;
+    background: var(--mid);
+    color: var(--white);
+    font-size: 1.05rem;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
-    margin-bottom: 24px;
+  }
+
+  .step-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(78,128,152,0.12);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--mid);
-    transition: background 0.25s, color 0.25s;
   }
 
   .step-title {
     font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     color: var(--dark);
-    transition: color 0.25s;
   }
 
   .step-text {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     line-height: 1.7;
     color: var(--text-mid);
-    transition: color 0.25s;
   }
 
   /* ─── WHY US ─── */
@@ -981,9 +1006,11 @@
 
     .hero-stats { grid-template-columns: 1fr 1fr; }
 
-    .how-steps,
     .advantages,
     .product-grid { grid-template-columns: 1fr 1fr; }
+
+    .how-steps { grid-template-columns: minmax(0, 1fr); gap: 20px; max-width: 560px; margin: 0 auto; }
+    .step:not(:last-child)::after { display: none; }
 
     .segments { grid-template-columns: 1fr 1fr; }
 
@@ -1059,9 +1086,10 @@
     .section-sub { font-size: 0.9rem; }
 
     /* Steps single col */
-    .step { padding: 28px 20px; }
-    .step-num { font-size: 2.8rem; top: 14px; right: 14px; }
-    .how-steps { grid-template-columns: 1fr; }
+    .step { padding: 24px 20px 28px; }
+    .step-num { width: 44px; height: 44px; font-size: 0.95rem; }
+    .step-icon { width: 48px; height: 48px; }
+    .how-steps { grid-template-columns: minmax(0, 1fr); }
 
     /* Why us, full width cards */
     .advantage { padding: 24px 20px; }
@@ -1439,26 +1467,41 @@
         <div class="section-label">The Process</div>
         <h2 class="section-title">Simple from start <em>to delivery</em></h2>
       </div>
-      <p class="section-sub fade-up" style="transition-delay:0.1s">End-to-end service means you don't have to manage anything. From browsing to delivery, we handle it all.</p>
+      <p class="section-sub fade-up" style="transition-delay:0.1s">Three simple steps. We handle everything in between, from sourcing to delivery.</p>
     </div>
     <div class="how-steps">
       <div class="step fade-up">
-        <div class="step-num">01</div>
-        <div class="step-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+        <div class="step-media">
+          <div class="step-media-side">
+            <div class="step-num">01</div>
+            <div class="step-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+          </div>
+          <img src="images/process-browse-laptop.webp" alt="Laptop showing a catalogue of a cap, t-shirt and hoodie" width="800" height="511" loading="lazy">
+        </div>
         <div class="step-title">Browse &amp; Choose</div>
-        <p class="step-text">Explore our supplier catalogues and select products that suit your brand, budget, and occasion. Not sure what fits? We'll guide you.</p>
+        <p class="step-text">Pick products that suit your brand, budget and occasion. Not sure what fits? We'll help you choose.</p>
       </div>
       <div class="step fade-up" style="transition-delay:0.1s">
-        <div class="step-num">02</div>
-        <div class="step-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></div>
+        <div class="step-media">
+          <div class="step-media-side">
+            <div class="step-num">02</div>
+            <div class="step-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></div>
+          </div>
+          <img src="images/process-brief-cap-mockup.webp" alt="Navy cap embroidered with a sample logo beside a design sheet" width="800" height="511" loading="lazy">
+        </div>
         <div class="step-title">Submit Your Brief</div>
-        <p class="step-text">Fill in our simple order form with your details, quantities, artwork, and deadline. Your dedicated sales manager takes it from there.</p>
+        <p class="step-text">Tell us your quantities, artwork and deadline using our quick form. Your dedicated sales manager takes it from there.</p>
       </div>
       <div class="step fade-up" style="transition-delay:0.2s">
-        <div class="step-num">03</div>
-        <div class="step-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V10"/><path d="M23 3H1v7h22V3z"/><path d="M10 12h4"/></svg></div>
+        <div class="step-media">
+          <div class="step-media-side">
+            <div class="step-num">03</div>
+            <div class="step-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V10"/><path d="M23 3H1v7h22V3z"/><path d="M10 12h4"/></svg></div>
+          </div>
+          <img src="images/process-delivery-box.webp" alt="Branded cap and folded t-shirt packed with a Brandi Made delivery box" width="800" height="523" loading="lazy">
+        </div>
         <div class="step-title">Quote &amp; Mockup in 24 Hours</div>
-        <p class="step-text">Receive a personalised quote and embroidery mockup within 24 hours. Approve or vary your proof until it's perfect, then sit back while we deliver your finished branded merch.</p>
+        <p class="step-text">Get a personalised quote and embroidery mockup within 24 hours. Request changes until it's right, then we deliver your finished merch.</p>
       </div>
     </div>
   </div>
