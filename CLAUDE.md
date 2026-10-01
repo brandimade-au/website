@@ -100,11 +100,13 @@ Rules for any form work:
 - Keep `action="/thank-you.html"`.
 - Adding a field to an existing form is safe; Netlify picks it up on next deploy.
 
-**Known broken — `referrals.html`:** the submit button calls `submitReferral()`,
-which is not defined anywhere, and the inputs are not inside a `<form>` element
-with `data-netlify="true"`. The form does not work and captures nothing. This is a
-known outstanding bug, not something to silently patch as a side effect of another
-task.
+**Working form — `referrals.html`:**
+```html
+<form class="ref-form" name="referral" method="POST" data-netlify="true"
+      netlify-honeypot="bot-field" action="/thank-you.html">
+  <input type="hidden" name="form-name" value="referral">
+```
+`referral` keeps that name forever, same as `quote-request`.
 
 ## Writing style for site copy
 
