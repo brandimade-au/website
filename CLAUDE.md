@@ -89,9 +89,12 @@ These are live sales enquiries. Breaking a form costs real revenue.
 ```
 
 Rules for any form work:
+- Every form must be a real Netlify form: a `<form>` element with
+  `data-netlify="true"` and a `name` that matches its hidden `form-name` input.
 - The `name` attribute and the hidden `form-name` value **must match exactly**.
 - **Never rename an existing form.** Netlify treats a renamed form as a brand new
   one and the old submissions stop flowing. `quote-request` keeps that name forever.
+- **Never remove an existing form** without telling Sherena first.
 - Every field needs a `name` attribute — Netlify only captures named fields.
 - Keep the `bot-field` honeypot.
 - Keep `action="/thank-you.html"`.
@@ -102,6 +105,13 @@ which is not defined anywhere, and the inputs are not inside a `<form>` element
 with `data-netlify="true"`. The form does not work and captures nothing. This is a
 known outstanding bug, not something to silently patch as a side effect of another
 task.
+
+## Writing style for site copy
+
+When a task involves writing or editing copy:
+- Keep it professional, friendly and concise.
+- Use Australian English spelling and phrasing (colour, organise, centre,
+  enquiry, personalised).
 
 ## SEO — do not regress these
 
