@@ -195,22 +195,24 @@
   .hero-left { position: relative; z-index: 2; max-width: 420px; text-align: left; }
 
   @media (max-width: 768px) {
+    /* Text sits at the top; the bottom is kept clear so the
+       BRANDI bag (left of centre in the photo) stays visible */
     .hero {
       min-height: 85vh;
-      background-position: center 30%;
-      align-items: flex-end;
+      background-position: 26% bottom;
+      align-items: flex-start;
       padding-bottom: 0;
     }
 
     .hero-overlay {
-      background: linear-gradient(to top, rgba(21,34,40,0.85) 0%, rgba(21,34,40,0.25) 55%, rgba(21,34,40,0.1) 100%);
+      background: linear-gradient(to bottom, rgba(21,34,40,0.8) 0%, rgba(21,34,40,0.6) 45%, rgba(21,34,40,0) 70%);
     }
 
     .hero-grid {
       padding-left: 5%;
       padding-right: 5%;
-      padding-top: 0;
-      padding-bottom: 44px;
+      padding-top: 100px;
+      padding-bottom: 260px;
       align-items: flex-start;
     }
 
@@ -460,63 +462,108 @@
   .how-steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    background: rgba(21,34,40,0.08);
+    gap: 40px;
   }
 
   .step {
-    background: var(--white);
-    padding: 48px 36px;
+    background: rgba(187,210,228,0.3);
+    border-radius: 16px;
+    padding: 28px 32px 40px;
     position: relative;
-    transition: background 0.25s;
+    display: flex;
+    flex-direction: column;
   }
 
-  .step:hover { background: var(--dark); }
-  .step:hover .step-num { color: rgba(255,255,255,0.15); }
-  .step:hover .step-title { color: white; }
-  .step:hover .step-text { color: rgba(255,255,255,0.6); }
-  .step:hover .step-icon { background: rgba(78,128,152,0.2); color: var(--light); }
+  .step:nth-child(2) { background: rgba(21,34,40,0.035); }
+
+  /* Arrow between steps */
+  .step:not(:last-child)::after {
+    content: '\2192';
+    position: absolute;
+    top: 100px;
+    right: -30px;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: var(--mid);
+    opacity: 0.6;
+  }
+
+  .step-media {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .step-media-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .step-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    mix-blend-mode: multiply;
+  }
 
   .step-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 4.5rem;
-    font-weight: 700;
-    color: rgba(21,34,40,0.06);
-    line-height: 1;
-    position: absolute;
-    top: 24px;
-    right: 28px;
-    transition: color 0.25s;
-  }
-
-  .step-icon {
     width: 52px;
     height: 52px;
-    background: rgba(78,128,152,0.1);
-    border-radius: 2px;
+    border-radius: 50%;
+    background: var(--mid);
+    color: var(--white);
+    font-size: 1.05rem;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
-    margin-bottom: 24px;
+  }
+
+  .step-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(78,128,152,0.12);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--mid);
-    transition: background 0.25s, color 0.25s;
   }
 
   .step-title {
     font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     color: var(--dark);
-    transition: color 0.25s;
   }
 
   .step-text {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     line-height: 1.7;
     color: var(--text-mid);
-    transition: color 0.25s;
+  }
+
+  .step-cta {
+    margin-top: auto;
+    padding-top: 28px;
+    text-align: center;
+  }
+
+  .step-cta a { border-radius: 6px; }
+
+  .step .btn-outline {
+    color: var(--dark);
+    border-color: rgba(21,34,40,0.3);
+  }
+
+  .step .btn-outline:hover {
+    border-color: var(--dark);
+    color: var(--dark);
   }
 
   /* ─── WHY US ─── */
@@ -981,9 +1028,11 @@
 
     .hero-stats { grid-template-columns: 1fr 1fr; }
 
-    .how-steps,
     .advantages,
     .product-grid { grid-template-columns: 1fr 1fr; }
+
+    .how-steps { grid-template-columns: minmax(0, 1fr); gap: 20px; max-width: 560px; margin: 0 auto; }
+    .step:not(:last-child)::after { display: none; }
 
     .segments { grid-template-columns: 1fr 1fr; }
 
@@ -1017,9 +1066,13 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
       gap: 5px;
       cursor: pointer;
       padding: 6px;
+      min-width: 44px;
+      min-height: 44px;
+      margin: -8px -4px;
       background: none;
       border: none;
     }
@@ -1044,6 +1097,9 @@
     .segments { grid-template-columns: 1fr; }
 
     .form-grid { grid-template-columns: 1fr; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea { font-size: 16px; }
 
     .footer-top { grid-template-columns: 1fr; }
 
@@ -1059,9 +1115,10 @@
     .section-sub { font-size: 0.9rem; }
 
     /* Steps single col */
-    .step { padding: 28px 20px; }
-    .step-num { font-size: 2.8rem; top: 14px; right: 14px; }
-    .how-steps { grid-template-columns: 1fr; }
+    .step { padding: 24px 20px 28px; }
+    .step-num { width: 44px; height: 44px; font-size: 0.95rem; }
+    .step-icon { width: 48px; height: 48px; }
+    .how-steps { grid-template-columns: minmax(0, 1fr); }
 
     /* Why us, full width cards */
     .advantage { padding: 24px 20px; }
@@ -1143,19 +1200,29 @@
     overflow: hidden;
     width: 100%;
   }
+  /* The track stays still and each card animates on its own.
+     iOS Safari drops parts of one very wide moving strip, but
+     handles many small moving cards reliably. Every card shares
+     the same animation, so they move together as one row.
+     Distance = 4 unique cards x (card width + gap). */
   .scroll-track {
     display: flex;
     gap: 20px;
     width: max-content;
-    animation: scrollLeft 40s linear infinite;
-    will-change: transform;
   }
-  .scroll-track:hover {
+  .scroll-card {
+    animation: scrollLeft 40s linear infinite;
+  }
+  .scroll-track:hover .scroll-card {
     animation-play-state: paused;
   }
   @keyframes scrollLeft {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0%   { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-1040px, 0, 0); }
+  }
+  @keyframes scrollLeftMobile {
+    0%   { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-776px, 0, 0); }
   }
   .scroll-card {
     flex: 0 0 240px;
@@ -1163,11 +1230,11 @@
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: translate 0.3s ease, box-shadow 0.3s ease;
     cursor: default;
   }
   .scroll-card:hover {
-    transform: translateY(-6px);
+    translate: 0 -6px;
     box-shadow: 0 12px 32px rgba(0,0,0,0.13);
   }
   .scroll-card-img {
@@ -1192,7 +1259,8 @@
     .scroll-card { flex: 0 0 180px; }
     .scroll-card-img { height: 150px; }
     .scroll-fade-left, .scroll-fade-right { width: 50px; }
-    .scroll-track { gap: 14px; animation-duration: 32s; }
+    .scroll-track { gap: 14px; }
+    .scroll-card { animation: scrollLeftMobile 32s linear infinite; }
   }
 
   
@@ -1220,17 +1288,22 @@
   .tscroll-fade-left  { left: 0;  background: linear-gradient(to right, #fff 0%, transparent 100%); }
   .tscroll-fade-right { right: 0; background: linear-gradient(to left,  #fff 0%, transparent 100%); }
   .tscroll-wrapper { overflow: hidden; width: 100%; }
+  /* Same approach as the product strip: each card animates.
+     Distance = 6 unique cards x (card width + gap). */
   .tscroll-track {
     display: flex;
     gap: 20px;
     width: max-content;
-    animation: tScrollLeft 52s linear infinite;
-    will-change: transform;
   }
-  .tscroll-track:hover { animation-play-state: paused; }
+  .tcard { animation: tScrollLeft 52s linear infinite; }
+  .tscroll-track:hover .tcard { animation-play-state: paused; }
   @keyframes tScrollLeft {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0%   { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-1920px, 0, 0); }
+  }
+  @keyframes tScrollLeftMobile {
+    0%   { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-1644px, 0, 0); }
   }
   .tcard {
     flex: 0 0 300px;
@@ -1238,12 +1311,12 @@
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: translate 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
   }
   .tcard:hover {
-    transform: translateY(-5px);
+    translate: 0 -5px;
     box-shadow: 0 14px 36px rgba(0,0,0,0.11);
   }
   .tcard-img {
@@ -1318,7 +1391,8 @@
     .tcard { flex: 0 0 260px; }
     .tcard-img { height: 150px; }
     .tscroll-fade-left, .tscroll-fade-right { width: 40px; }
-    .tscroll-track { gap: 14px; animation-duration: 44s; }
+    .tscroll-track { gap: 14px; }
+    .tcard { animation: tScrollLeftMobile 44s linear infinite; }
   }
 
   .skip-link {
@@ -1335,7 +1409,7 @@
 
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    .scroll-track, .tscroll-track { animation: none; }
+    .scroll-card, .tcard { animation: none; }
     .fade-up, .step, .advantage, .segment, .product-card, .scroll-card, .tcard, .btn-primary { transition: none; }
   }
   </style>
@@ -1439,26 +1513,43 @@
         <div class="section-label">The Process</div>
         <h2 class="section-title">Simple from start <em>to delivery</em></h2>
       </div>
-      <p class="section-sub fade-up" style="transition-delay:0.1s">End-to-end service means you don't have to manage anything. From browsing to delivery, we handle it all.</p>
+      <p class="section-sub fade-up" style="transition-delay:0.1s">Three simple steps. We handle everything in between, from sourcing to delivery.</p>
     </div>
     <div class="how-steps">
       <div class="step fade-up">
-        <div class="step-num">01</div>
-        <div class="step-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+        <div class="step-media">
+          <div class="step-media-side">
+            <div class="step-num">01</div>
+            <div class="step-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+          </div>
+          <img src="images/process-browse-laptop.webp" alt="Laptop showing a catalogue of a cap, t-shirt and hoodie" width="800" height="511" loading="lazy">
+        </div>
         <div class="step-title">Browse &amp; Choose</div>
-        <p class="step-text">Explore our supplier catalogues and select products that suit your brand, budget, and occasion. Not sure what fits? We'll guide you.</p>
+        <p class="step-text">Browse our suppliers' websites and pick the products that suit your brand, budget and occasion. Not sure what fits? We'll help you choose.</p>
+        <div class="step-cta"><a href="shop.html" class="btn-outline">Shop Now</a></div>
       </div>
       <div class="step fade-up" style="transition-delay:0.1s">
-        <div class="step-num">02</div>
-        <div class="step-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></div>
+        <div class="step-media">
+          <div class="step-media-side">
+            <div class="step-num">02</div>
+            <div class="step-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></div>
+          </div>
+          <img src="images/process-brief-cap-mockup.webp" alt="Navy cap embroidered with a sample logo beside a design sheet" width="800" height="511" loading="lazy">
+        </div>
         <div class="step-title">Submit Your Brief</div>
-        <p class="step-text">Fill in our simple order form with your details, quantities, artwork, and deadline. Your dedicated sales manager takes it from there.</p>
+        <p class="step-text">Send us the products you've picked, plus your quantities, artwork and deadline, using our quick form. Your dedicated sales manager takes it from there.</p>
+        <div class="step-cta"><a href="#quote" class="btn-primary">Get a Quote</a></div>
       </div>
       <div class="step fade-up" style="transition-delay:0.2s">
-        <div class="step-num">03</div>
-        <div class="step-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V10"/><path d="M23 3H1v7h22V3z"/><path d="M10 12h4"/></svg></div>
+        <div class="step-media">
+          <div class="step-media-side">
+            <div class="step-num">03</div>
+            <div class="step-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V10"/><path d="M23 3H1v7h22V3z"/><path d="M10 12h4"/></svg></div>
+          </div>
+          <img src="images/process-delivery-box.webp" alt="Branded cap and folded t-shirt packed with a Brandi Made delivery box" width="800" height="523" loading="lazy">
+        </div>
         <div class="step-title">Quote &amp; Mockup in 24 Hours</div>
-        <p class="step-text">Receive a personalised quote and embroidery mockup within 24 hours. Approve or vary your proof until it's perfect, then sit back while we deliver your finished branded merch.</p>
+        <p class="step-text">Get a personalised quote and embroidery mockup within 24 hours. Request changes until it's right, then we deliver your finished merch.</p>
       </div>
     </div>
   </div>
@@ -1797,6 +1888,33 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.12 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // On refresh, always start at the top of the page instead of jumping
+  // to a #section or the last scroll position. Normal visits (e.g. a
+  // link from another page to index.html#quote) are left alone.
+  const _nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+  if (_nav && _nav.type === 'reload') {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    const _toTop = () => window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    _toTop();
+    window.addEventListener('load', _toTop);
+  }
+  // Restore normal back/forward scroll memory when leaving the page
+  window.addEventListener('pagehide', () => {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'auto';
+  });
+
+  // In-page links (e.g. Get a Quote) scroll to their section without
+  // adding #section to the address, so a refresh doesn't jump there
+  document.querySelectorAll('a[href^="#"]:not(.skip-link)').forEach(link => {
+    link.addEventListener('click', e => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView(); // smooth via CSS; respects reduced-motion
+    });
+  });
 
 
   // Hamburger menu
