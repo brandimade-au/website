@@ -468,6 +468,8 @@
     border-radius: 16px;
     padding: 28px 32px 40px;
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   .step:nth-child(2) { background: rgba(21,34,40,0.035); }
@@ -542,6 +544,21 @@
     font-size: 0.95rem;
     line-height: 1.7;
     color: var(--text-mid);
+  }
+
+  .step-cta {
+    margin-top: auto;
+    padding-top: 28px;
+  }
+
+  .step .btn-outline {
+    color: var(--dark);
+    border-color: rgba(21,34,40,0.3);
+  }
+
+  .step .btn-outline:hover {
+    border-color: var(--dark);
+    color: var(--dark);
   }
 
   /* ─── WHY US ─── */
@@ -1479,7 +1496,8 @@
           <img src="images/process-browse-laptop.webp" alt="Laptop showing a catalogue of a cap, t-shirt and hoodie" width="800" height="511" loading="lazy">
         </div>
         <div class="step-title">Browse &amp; Choose</div>
-        <p class="step-text">Pick products that suit your brand, budget and occasion. Not sure what fits? We'll help you choose.</p>
+        <p class="step-text">Browse our suppliers' websites and pick the products that suit your brand, budget and occasion. Not sure what fits? We'll help you choose.</p>
+        <div class="step-cta"><a href="shop.html" class="btn-outline">Shop Now</a></div>
       </div>
       <div class="step fade-up" style="transition-delay:0.1s">
         <div class="step-media">
@@ -1490,7 +1508,8 @@
           <img src="images/process-brief-cap-mockup.webp" alt="Navy cap embroidered with a sample logo beside a design sheet" width="800" height="511" loading="lazy">
         </div>
         <div class="step-title">Submit Your Brief</div>
-        <p class="step-text">Tell us your quantities, artwork and deadline using our quick form. Your dedicated sales manager takes it from there.</p>
+        <p class="step-text">Send us the products you've picked, plus your quantities, artwork and deadline, using our quick form. Your dedicated sales manager takes it from there.</p>
+        <div class="step-cta"><a href="#quote" class="btn-primary">Get a Quote</a></div>
       </div>
       <div class="step fade-up" style="transition-delay:0.2s">
         <div class="step-media">
