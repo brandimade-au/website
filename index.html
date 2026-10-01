@@ -1889,6 +1889,33 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
+  // On refresh, always start at the top of the page instead of jumping
+  // to a #section or the last scroll position. Normal visits (e.g. a
+  // link from another page to index.html#quote) are left alone.
+  const _nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+  if (_nav && _nav.type === 'reload') {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    const _toTop = () => window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    _toTop();
+    window.addEventListener('load', _toTop);
+  }
+  // Restore normal back/forward scroll memory when leaving the page
+  window.addEventListener('pagehide', () => {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'auto';
+  });
+
+  // In-page links (e.g. Get a Quote) scroll to their section without
+  // adding #section to the address, so a refresh doesn't jump there
+  document.querySelectorAll('a[href^="#"]:not(.skip-link)').forEach(link => {
+    link.addEventListener('click', e => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView(); // smooth via CSS; respects reduced-motion
+    });
+  });
+
 
   // Hamburger menu
   const _navToggle = document.getElementById('navToggle');
