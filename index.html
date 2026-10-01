@@ -1200,19 +1200,29 @@
     overflow: hidden;
     width: 100%;
   }
+  /* The track stays still and each card animates on its own.
+     iOS Safari drops parts of one very wide moving strip, but
+     handles many small moving cards reliably. Every card shares
+     the same animation, so they move together as one row.
+     Distance = 4 unique cards x (card width + gap). */
   .scroll-track {
     display: flex;
     gap: 20px;
-    padding-right: 20px; /* matches gap so the -50% loop is seamless */
     width: max-content;
+  }
+  .scroll-card {
     animation: scrollLeft 40s linear infinite;
   }
-  .scroll-track:hover {
+  .scroll-track:hover .scroll-card {
     animation-play-state: paused;
   }
   @keyframes scrollLeft {
     0%   { transform: translate3d(0, 0, 0); }
-    100% { transform: translate3d(-50%, 0, 0); }
+    100% { transform: translate3d(-1040px, 0, 0); }
+  }
+  @keyframes scrollLeftMobile {
+    0%   { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-776px, 0, 0); }
   }
   .scroll-card {
     flex: 0 0 240px;
@@ -1220,15 +1230,11 @@
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: translate 0.3s ease, box-shadow 0.3s ease;
     cursor: default;
-    /* Each card gets its own layer so iOS Safari doesn't drop
-       parts of the wide moving strip while it animates */
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
   }
   .scroll-card:hover {
-    transform: translateY(-6px);
+    translate: 0 -6px;
     box-shadow: 0 12px 32px rgba(0,0,0,0.13);
   }
   .scroll-card-img {
@@ -1253,7 +1259,8 @@
     .scroll-card { flex: 0 0 180px; }
     .scroll-card-img { height: 150px; }
     .scroll-fade-left, .scroll-fade-right { width: 50px; }
-    .scroll-track { gap: 14px; padding-right: 14px; animation-duration: 32s; }
+    .scroll-track { gap: 14px; }
+    .scroll-card { animation: scrollLeftMobile 32s linear infinite; }
   }
 
   
@@ -1281,17 +1288,22 @@
   .tscroll-fade-left  { left: 0;  background: linear-gradient(to right, #fff 0%, transparent 100%); }
   .tscroll-fade-right { right: 0; background: linear-gradient(to left,  #fff 0%, transparent 100%); }
   .tscroll-wrapper { overflow: hidden; width: 100%; }
+  /* Same approach as the product strip: each card animates.
+     Distance = 6 unique cards x (card width + gap). */
   .tscroll-track {
     display: flex;
     gap: 20px;
-    padding-right: 20px; /* matches gap so the -50% loop is seamless */
     width: max-content;
-    animation: tScrollLeft 52s linear infinite;
   }
-  .tscroll-track:hover { animation-play-state: paused; }
+  .tcard { animation: tScrollLeft 52s linear infinite; }
+  .tscroll-track:hover .tcard { animation-play-state: paused; }
   @keyframes tScrollLeft {
     0%   { transform: translate3d(0, 0, 0); }
-    100% { transform: translate3d(-50%, 0, 0); }
+    100% { transform: translate3d(-1920px, 0, 0); }
+  }
+  @keyframes tScrollLeftMobile {
+    0%   { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-1644px, 0, 0); }
   }
   .tcard {
     flex: 0 0 300px;
@@ -1299,14 +1311,12 @@
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: translate 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
   }
   .tcard:hover {
-    transform: translateY(-5px);
+    translate: 0 -5px;
     box-shadow: 0 14px 36px rgba(0,0,0,0.11);
   }
   .tcard-img {
@@ -1381,7 +1391,8 @@
     .tcard { flex: 0 0 260px; }
     .tcard-img { height: 150px; }
     .tscroll-fade-left, .tscroll-fade-right { width: 40px; }
-    .tscroll-track { gap: 14px; padding-right: 14px; animation-duration: 44s; }
+    .tscroll-track { gap: 14px; }
+    .tcard { animation: tScrollLeftMobile 44s linear infinite; }
   }
 
   .skip-link {
@@ -1398,7 +1409,7 @@
 
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    .scroll-track, .tscroll-track { animation: none; }
+    .scroll-card, .tcard { animation: none; }
     .fade-up, .step, .advantage, .segment, .product-card, .scroll-card, .tcard, .btn-primary { transition: none; }
   }
   </style>
