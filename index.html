@@ -195,22 +195,24 @@
   .hero-left { position: relative; z-index: 2; max-width: 420px; text-align: left; }
 
   @media (max-width: 768px) {
+    /* Text sits at the top; the bottom is kept clear so the
+       BRANDI bag (left of centre in the photo) stays visible */
     .hero {
       min-height: 85vh;
-      background-position: center 30%;
-      align-items: flex-end;
+      background-position: 26% bottom;
+      align-items: flex-start;
       padding-bottom: 0;
     }
 
     .hero-overlay {
-      background: linear-gradient(to top, rgba(21,34,40,0.85) 0%, rgba(21,34,40,0.25) 55%, rgba(21,34,40,0.1) 100%);
+      background: linear-gradient(to bottom, rgba(21,34,40,0.8) 0%, rgba(21,34,40,0.6) 45%, rgba(21,34,40,0) 70%);
     }
 
     .hero-grid {
       padding-left: 5%;
       padding-right: 5%;
-      padding-top: 0;
-      padding-bottom: 44px;
+      padding-top: 100px;
+      padding-bottom: 260px;
       align-items: flex-start;
     }
 
@@ -1201,16 +1203,16 @@
   .scroll-track {
     display: flex;
     gap: 20px;
+    padding-right: 20px; /* matches gap so the -50% loop is seamless */
     width: max-content;
     animation: scrollLeft 40s linear infinite;
-    will-change: transform;
   }
   .scroll-track:hover {
     animation-play-state: paused;
   }
   @keyframes scrollLeft {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0%   { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
   }
   .scroll-card {
     flex: 0 0 240px;
@@ -1220,6 +1222,10 @@
     box-shadow: 0 2px 12px rgba(0,0,0,0.07);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: default;
+    /* Each card gets its own layer so iOS Safari doesn't drop
+       parts of the wide moving strip while it animates */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
   .scroll-card:hover {
     transform: translateY(-6px);
@@ -1247,7 +1253,7 @@
     .scroll-card { flex: 0 0 180px; }
     .scroll-card-img { height: 150px; }
     .scroll-fade-left, .scroll-fade-right { width: 50px; }
-    .scroll-track { gap: 14px; animation-duration: 32s; }
+    .scroll-track { gap: 14px; padding-right: 14px; animation-duration: 32s; }
   }
 
   
@@ -1278,14 +1284,14 @@
   .tscroll-track {
     display: flex;
     gap: 20px;
+    padding-right: 20px; /* matches gap so the -50% loop is seamless */
     width: max-content;
     animation: tScrollLeft 52s linear infinite;
-    will-change: transform;
   }
   .tscroll-track:hover { animation-play-state: paused; }
   @keyframes tScrollLeft {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0%   { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
   }
   .tcard {
     flex: 0 0 300px;
@@ -1296,6 +1302,8 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
   .tcard:hover {
     transform: translateY(-5px);
@@ -1373,7 +1381,7 @@
     .tcard { flex: 0 0 260px; }
     .tcard-img { height: 150px; }
     .tscroll-fade-left, .tscroll-fade-right { width: 40px; }
-    .tscroll-track { gap: 14px; animation-duration: 44s; }
+    .tscroll-track { gap: 14px; padding-right: 14px; animation-duration: 44s; }
   }
 
   .skip-link {
