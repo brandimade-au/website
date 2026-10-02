@@ -125,8 +125,8 @@
   nav .nav-cta {
     background: var(--red);
     color: white !important;
-    padding: 10px 22px;
-    border-radius: 2px;
+    padding: 10px 26px;
+    border-radius: 6px;
     opacity: 1 !important;
     transition: background 0.2s !important;
   }
@@ -323,6 +323,7 @@
     cursor: pointer;
     display: inline-block;
     transition: background 0.2s, transform 0.2s;
+    border-radius: 6px;
   }
 
   .btn-primary:hover {
@@ -342,6 +343,7 @@
     border: 1px solid rgba(187,210,228,0.35);
     display: inline-block;
     transition: border-color 0.2s, color 0.2s;
+    border-radius: 6px;
   }
 
   .btn-outline:hover {
@@ -892,6 +894,7 @@
     font-family: 'DM Sans', sans-serif;
     font-size: 0.9rem;
     color: var(--text-dark);
+    border-radius: 6px;
     outline: none;
     transition: border-color 0.2s;
     width: 100%;
@@ -924,6 +927,8 @@
   .form-group textarea::placeholder { color: var(--text-mid); opacity: 0.7; }
 
   .form-group textarea { resize: vertical; min-height: 110px; }
+
+  .form-group label .req { color: var(--red); font-size: 1.1rem; font-weight: 700; line-height: 0; }
 
   .form-submit {
     display: flex;
@@ -1809,19 +1814,19 @@
         <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
         <div class="form-grid">
           <div class="form-group full">
-            <label for="qf-name">Name *</label>
+            <label for="qf-name">Name <span class="req" aria-hidden="true">*</span></label>
             <input type="text" id="qf-name" name="name" placeholder="Jane Smith" autocomplete="name" required>
           </div>
           <div class="form-group">
-            <label for="qf-email">Email Address *</label>
+            <label for="qf-email">Email Address <span class="req" aria-hidden="true">*</span></label>
             <input type="email" id="qf-email" name="email" placeholder="jane@company.com.au" autocomplete="email" required>
           </div>
           <div class="form-group">
-            <label for="qf-phone">Phone (optional)</label>
+            <label for="qf-phone">Phone</label>
             <input type="tel" id="qf-phone" name="phone" placeholder="04XX XXX XXX" autocomplete="tel">
           </div>
           <div class="form-group">
-            <label for="qf-units">How many units? *</label>
+            <label for="qf-units">How many units? <span class="req" aria-hidden="true">*</span></label>
             <select id="qf-units" name="units" required>
               <option value="">Please select</option>
               <option>25-50</option>
@@ -1832,8 +1837,26 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="qf-due-date">Due date, if any (optional)</label>
+            <label for="qf-due-date">Due date, if any</label>
             <input type="date" id="qf-due-date" name="due-date">
+          </div>
+          <div class="form-group full">
+            <label for="qf-referral-source">How did you hear about us? <span class="req" aria-hidden="true">*</span></label>
+            <select id="qf-referral-source" name="how-did-you-hear" required>
+              <option value="">Please select</option>
+              <option>Google Search</option>
+              <option>Social Media</option>
+              <option>Referral</option>
+              <option>Existing Customer</option>
+              <option>Word of Mouth</option>
+              <option>Event</option>
+              <option>Advertisement</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="qf-message">Tell us about your request <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="qf-message" name="message" placeholder="What products are you after? Include colours, logo or artwork details, budget, or anything else helpful..." required></textarea>
           </div>
         </div>
         <div class="form-submit">
