@@ -855,8 +855,8 @@
   .contact-item a:hover { color: var(--light); }
 
   .quote-form {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(187,210,228,0.12);
+    background: rgba(255,255,255,0.08);
+    border: 1px solid var(--mid);
     padding: 48px 44px;
   }
 
@@ -880,18 +880,18 @@
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.5);
+    color: var(--light);
   }
 
   .form-group input,
   .form-group select,
   .form-group textarea {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(187,210,228,0.15);
+    background: var(--white);
+    border: 2px solid var(--light);
     padding: 14px 18px;
     font-family: 'DM Sans', sans-serif;
     font-size: 0.9rem;
-    color: white;
+    color: var(--text-dark);
     outline: none;
     transition: border-color 0.2s;
     width: 100%;
@@ -899,16 +899,29 @@
     appearance: none;
   }
 
-  .form-group select option { background: var(--dark); color: white; }
+  .form-group select option { background: var(--white); color: var(--text-dark); }
+
+  .form-group select {
+    background-image:
+      linear-gradient(45deg, transparent 50%, var(--dark) 50%),
+      linear-gradient(135deg, var(--dark) 50%, transparent 50%);
+    background-position: calc(100% - 22px) 50%, calc(100% - 16px) 50%;
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+    padding-right: 44px;
+  }
+
+  .form-group input[type="date"] { min-height: 51px; }
 
   .form-group input:focus,
   .form-group select:focus,
   .form-group textarea:focus {
     border-color: var(--mid);
+    box-shadow: 0 0 0 3px rgba(78,128,152,0.45);
   }
 
   .form-group input::placeholder,
-  .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+  .form-group textarea::placeholder { color: var(--text-mid); opacity: 0.7; }
 
   .form-group textarea { resize: vertical; min-height: 110px; }
 
@@ -1795,43 +1808,32 @@
         <input type="hidden" name="form-name" value="quote-request">
         <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
         <div class="form-grid">
-          <div class="form-group">
-            <label for="qf-first-name">First Name *</label>
-            <input type="text" id="qf-first-name" name="first-name" placeholder="Jane" autocomplete="given-name" required>
-          </div>
-          <div class="form-group">
-            <label for="qf-last-name">Last Name *</label>
-            <input type="text" id="qf-last-name" name="last-name" placeholder="Smith" autocomplete="family-name" required>
-          </div>
-          <div class="form-group">
-            <label for="qf-business-name">Business Name</label>
-            <input type="text" id="qf-business-name" name="business-name" placeholder="Acme Pty Ltd" autocomplete="organization">
-          </div>
-          <div class="form-group">
-            <label for="qf-phone">Phone</label>
-            <input type="tel" id="qf-phone" name="phone" placeholder="04XX XXX XXX" autocomplete="tel">
-          </div>
           <div class="form-group full">
+            <label for="qf-name">Name *</label>
+            <input type="text" id="qf-name" name="name" placeholder="Jane Smith" autocomplete="name" required>
+          </div>
+          <div class="form-group">
             <label for="qf-email">Email Address *</label>
             <input type="email" id="qf-email" name="email" placeholder="jane@company.com.au" autocomplete="email" required>
           </div>
-          <div class="form-group full">
-            <label for="qf-referral-source">How did you hear about us?</label>
-            <select id="qf-referral-source" name="how-did-you-hear">
+          <div class="form-group">
+            <label for="qf-phone">Phone (optional)</label>
+            <input type="tel" id="qf-phone" name="phone" placeholder="04XX XXX XXX" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="qf-units">How many units? *</label>
+            <select id="qf-units" name="units" required>
               <option value="">Please select</option>
-              <option>Google Search</option>
-              <option>Social Media</option>
-              <option>Referral</option>
-              <option>Existing Customer</option>
-              <option>Word of Mouth</option>
-              <option>Event</option>
-              <option>Advertisement</option>
-              <option>Other</option>
+              <option>25-50</option>
+              <option>50-100</option>
+              <option>100-200</option>
+              <option>300-500</option>
+              <option>500+</option>
             </select>
           </div>
-          <div class="form-group full">
-            <label for="qf-message">Tell us about your project *</label>
-            <textarea id="qf-message" name="message" placeholder="What are you looking for? Include quantities, timeline, budget range, or anything else helpful..." required></textarea>
+          <div class="form-group">
+            <label for="qf-due-date">Due date, if any (optional)</label>
+            <input type="date" id="qf-due-date" name="due-date">
           </div>
         </div>
         <div class="form-submit">
