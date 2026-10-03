@@ -66,7 +66,7 @@
   nav ul { list-style: none; display: flex; gap: 36px; align-items: center; }
   nav ul a { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.72); text-decoration: none; transition: color 0.2s; }
   nav ul a:hover { color: var(--light); }
-  nav .nav-cta { background: var(--red); color: white !important; padding: 10px 22px; border-radius: 2px; }
+  nav .nav-cta { background: var(--red); color: white !important; padding: 10px 22px; border-radius: 6px; }
   nav .nav-cta:hover { background: #c01c2a !important; }
 
   .nav-hamburger { display: none; }
@@ -136,16 +136,17 @@
   .approach-right { padding-top: 16px; }
   .approach-right p { font-size: 0.95rem; line-height: 1.8; color: var(--text-mid); margin-bottom: 20px; }
   .approach-right p strong { color: var(--text-dark); font-weight: 600; }
+  .approach-img { width: 100%; height: auto; display: block; margin-top: 12px; }
   .location-badge { display: inline-flex; align-items: center; gap: 10px; background: var(--dark); color: rgba(255,255,255,0.7); padding: 12px 20px; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em; border-radius: 2px; margin-top: 8px; }
   .location-badge svg { color: var(--mid); }
 
   /* CTA */
-  .cta-section { background: var(--dark); padding: 80px 5%; }
+  .cta-section { background: var(--offwhite); padding: 80px 5%; }
   .cta-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
-  .cta-inner h2 { font-family: "Playfair Display", serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); color: white; font-weight: 700; }
-  .cta-inner h2 em { font-style: normal; color: var(--light); }
-  .cta-inner p { color: rgba(255,255,255,0.5); margin-top: 10px; font-size: 0.95rem; line-height: 1.65; max-width: 460px; }
-  .btn-primary { background: var(--red); color: white; padding: 16px 36px; font-family: "DM Sans", sans-serif; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border: none; cursor: pointer; display: inline-block; transition: background 0.2s; white-space: nowrap; border-radius: 2px; }
+  .cta-inner h2 { font-family: "Playfair Display", serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); color: var(--dark); font-weight: 700; }
+  .cta-inner h2 em { font-style: normal; color: var(--mid); }
+  .cta-inner p { color: var(--text-mid); margin-top: 10px; font-size: 0.95rem; line-height: 1.65; max-width: 460px; }
+  .btn-primary { background: var(--red); color: white; padding: 16px 36px; font-family: "DM Sans", sans-serif; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border: none; cursor: pointer; display: inline-block; transition: background 0.2s; white-space: nowrap; border-radius: 6px; }
   .btn-primary:hover { background: #c01c2a; }
 
   /* FOOTER */
@@ -294,20 +295,50 @@
   </div>
 </div>
 
-<!-- MISSION -->
-<section class="mission-section">
-  <div class="mission-inner">
-    <div class="mission-text">
-      <div class="section-label">Our Mission</div>
-      <h2 class="section-title">Built on the belief that<br><em>great branding should work.</em></h2>
-      <p>At Brandi Made, we believe great branding should work as hard as you do. Too many businesses end up with promotional products that collect dust, the wrong product, a rushed process, or merchandise that just doesn't reflect the brand.</p>
-      <p>We set out to change that. We're <strong>based in Brisbane</strong> and work with reputable Australian and New Zealand suppliers to deliver products that look good, feel great, and actually get used. From concept to completion, we handle every detail, mockup, sourcing, production, and delivery.</p>
-      <p>We're a small team, which means every client gets <strong>real attention</strong>. Not a ticket number. Not a call centre. A dedicated person who knows your order and is invested in getting it right.</p>
-      <div class="mission-quote">
-        <p>"At Brandi Made, your brand is our priority, and we're here to make sure it shines."</p>
+<!-- APPROACH -->
+<section class="approach-section" id="process">
+  <div class="approach-inner">
+    <div>
+      <div class="section-label">How We Work</div>
+      <h2 class="section-title">Simple process.<br><em style="color:var(--red)">Real results.</em></h2>
+      <div class="approach-list">
+        <div class="approach-item">
+          <div class="approach-num">1</div>
+          <div>
+            <h4>You tell us what you need</h4>
+            <p>No brief too rough. We ask the right questions and work with what you've got, product, logo, quantity, deadline.</p>
+          </div>
+        </div>
+        <div class="approach-item">
+          <div class="approach-num">2</div>
+          <div>
+            <h4>We quote and mock it up</h4>
+            <p>Upfront pricing and a complimentary digital mock-up so you can see exactly what you're getting before you commit.</p>
+          </div>
+        </div>
+        <div class="approach-item">
+          <div class="approach-num">3</div>
+          <div>
+            <h4>You approve, we produce</h4>
+            <p>Photo sample first, always. Once you're happy, we go to full production with no surprises.</p>
+          </div>
+        </div>
+        <div class="approach-item">
+          <div class="approach-num">4</div>
+          <div>
+            <h4>Delivered to your door</h4>
+            <p>Australia-wide. Shipping included in your quote. Quality guaranteed from the moment it lands.</p>
+          </div>
+        </div>
       </div>
     </div>
-
+    <div class="approach-right">
+      <div class="section-label">Based In</div>
+      <h2 class="section-title">Brisbane, <em>Australia</em></h2>
+      <p>We're a <strong>locally run, Australian-staffed</strong> business operating out of Brisbane. Everything is managed locally, no offshore customer service, no communication delays, no lost-in-translation briefs.</p>
+      <p>We partner with <strong>reputable Australian and New Zealand suppliers</strong> who share our commitment to quality. That means consistent product standards, reliable lead times, and merchandise that genuinely reflects your brand.</p>
+      <img class="approach-img" src="images/about-brisbane-map.webp" alt="Map of Australia with a pin on Brisbane, Queensland: local support, real people" width="549" height="322" loading="lazy">
+    </div>
   </div>
 </section>
 
@@ -358,57 +389,6 @@
         </div>
         <h3>End-to-End Managed</h3>
         <p>From your first enquiry through to merchandise at your door, we handle every step. You focus on your business, we handle the rest.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- APPROACH -->
-<section class="approach-section" id="process">
-  <div class="approach-inner">
-    <div>
-      <div class="section-label">How We Work</div>
-      <h2 class="section-title">Simple process.<br><em>Real results.</em></h2>
-      <div class="approach-list">
-        <div class="approach-item">
-          <div class="approach-num">1</div>
-          <div>
-            <h4>You tell us what you need</h4>
-            <p>No brief too rough. We ask the right questions and work with what you've got, product, logo, quantity, deadline.</p>
-          </div>
-        </div>
-        <div class="approach-item">
-          <div class="approach-num">2</div>
-          <div>
-            <h4>We quote and mock it up</h4>
-            <p>Upfront pricing and a complimentary digital mock-up so you can see exactly what you're getting before you commit.</p>
-          </div>
-        </div>
-        <div class="approach-item">
-          <div class="approach-num">3</div>
-          <div>
-            <h4>You approve, we produce</h4>
-            <p>Photo sample first, always. Once you're happy, we go to full production with no surprises.</p>
-          </div>
-        </div>
-        <div class="approach-item">
-          <div class="approach-num">4</div>
-          <div>
-            <h4>Delivered to your door</h4>
-            <p>Australia-wide. Shipping included in your quote. Quality guaranteed from the moment it lands.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="approach-right">
-      <div class="section-label">Based In</div>
-      <h2 class="section-title">Brisbane, <em>Australia</em></h2>
-      <p>We're a <strong>locally run, Australian-staffed</strong> business operating out of Brisbane. Everything is managed locally, no offshore customer service, no communication delays, no lost-in-translation briefs.</p>
-      <p>We partner with reputable Australian and New Zealand suppliers who share our commitment to quality. That means consistent product standards, reliable lead times, and merchandise that genuinely reflects your brand.</p>
-      <p>Whether you're a small business ordering for the first time or a corporate client managing recurring programs, we treat every order with the same level of care.</p>
-      <div class="location-badge">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Brisbane, Queensland, Australia
       </div>
     </div>
   </div>
