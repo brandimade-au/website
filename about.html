@@ -112,7 +112,16 @@
   .values-inner .section-label { color: var(--light); }
   .values-inner .section-label::before { background: var(--light); }
   .values-inner .section-title { color: white; margin-bottom: 56px; }
-  .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+  .values-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
+  .values-grid { display: grid; grid-template-columns: repeat(2, 1fr); grid-auto-rows: 1fr; gap: 2px; }
+  .based-card { background: var(--offwhite); border-radius: 10px; padding: 40px 36px; }
+  .values-inner .based-card .section-label { color: var(--mid); }
+  .values-inner .based-card .section-label::before { background: var(--mid); }
+  .based-card h3 { font-family: "Playfair Display", serif; font-size: clamp(1.5rem, 2.4vw, 1.9rem); font-weight: 700; color: var(--dark); line-height: 1.2; margin-bottom: 18px; }
+  .based-card h3 em { font-style: normal; color: var(--mid); }
+  .based-card p { font-size: 0.95rem; line-height: 1.8; color: var(--text-mid); margin-bottom: 16px; }
+  .based-card p strong { color: var(--text-dark); font-weight: 600; }
+  .based-card img { width: 100%; height: auto; display: block; margin-top: 8px; }
   .value-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(187,210,228,0.08); padding: 40px 32px; transition: background 0.25s, border-color 0.25s; }
   .value-card:hover { background: rgba(78,128,152,0.1); border-color: rgba(78,128,152,0.25); }
   .value-icon { width: 48px; height: 48px; background: rgba(78,128,152,0.15); border-radius: 2px; display: flex; align-items: center; justify-content: center; color: var(--light); margin-bottom: 24px; }
@@ -120,14 +129,11 @@
   .value-card p { font-size: 0.875rem; line-height: 1.7; color: rgba(255,255,255,0.48); }
 
   /* OUR PROCESS */
-  .process-section { background: var(--white); padding: 90px 5%; }
+  .process-section { background: var(--white); padding: 90px 5%; scroll-margin-top: 72px; }
   .process-inner { max-width: 1200px; margin: 0 auto; }
   .process-header { text-align: center; max-width: 640px; margin: 0 auto 48px; }
   .process-header .section-label { justify-content: center; }
   .process-header .section-title { margin-bottom: 14px; }
-  .process-header p { font-size: 0.95rem; line-height: 1.75; color: var(--text-mid); }
-  .ps-hint-hover, .ps-hint-tap { display: block; margin-top: 6px; font-size: 0.82rem; color: var(--mid); font-weight: 500; }
-  .ps-hint-tap { display: none; }
   .process-steps { list-style: none; display: flex; gap: 8px; height: 380px; }
   .ps-step { flex: 1 1 0; min-width: 0; background: var(--offwhite); border: 1px solid transparent; border-radius: 10px; padding: 28px 16px; overflow: hidden; cursor: pointer; transition: flex 0.45s ease, background 0.3s, border-color 0.3s, box-shadow 0.3s; outline: none; }
   .ps-step.is-active { flex: 3 1 0; background: var(--white); border-color: var(--light); box-shadow: 0 12px 32px rgba(21,34,40,0.08); }
@@ -142,20 +148,12 @@
   .ps-step.is-active .ps-media { width: 120px; height: 120px; }
   .ps-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
   .ps-you { order: 5; margin-top: -10px; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); white-space: nowrap; }
-  .ps-legend { display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 0.82rem !important; color: var(--text-mid); }
-  .ps-legend-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--red); display: inline-block; }
   .ps-title { font-family: "Playfair Display", serif; font-size: 0.95rem; font-weight: 700; line-height: 1.3; color: var(--dark); overflow-wrap: break-word; }
   .ps-body { width: 300px; max-width: 100%; margin-top: 14px; opacity: 0; transform: translateY(6px); transition: opacity 0.25s, transform 0.25s; font-size: 0.88rem; line-height: 1.7; color: var(--text-mid); }
   .ps-step.is-active .ps-body { opacity: 1; transform: none; transition-delay: 0.2s; }
   .ps-body ul { margin: 6px 0 0 18px; display: flex; flex-direction: column; gap: 4px; }
   .ps-tag { display: inline-block; margin-top: 12px; background: rgba(78,128,152,0.12); color: var(--dark); font-size: 0.8rem; font-weight: 600; padding: 6px 12px; border-radius: 6px; }
-  @media (hover: none) {
-    .ps-hint-hover { display: none; }
-    .ps-hint-tap { display: block; }
-  }
   @media (max-width: 1200px) {
-    .ps-hint-hover { display: none; }
-    .ps-hint-tap { display: block; }
     .process-steps { flex-direction: column; height: auto; }
     .ps-step { flex: none; padding: 18px 20px; }
     .ps-step.is-active { flex: none; }
@@ -168,22 +166,6 @@
     .ps-body { width: auto; max-height: 0; margin-top: 0; overflow: hidden; transition: max-height 0.35s ease, opacity 0.25s, margin-top 0.35s; }
     .ps-step.is-active .ps-body { max-height: 260px; margin-top: 12px; }
   }
-
-  /* APPROACH */
-  .approach-section { background: var(--offwhite); padding: 90px 5%; }
-  .approach-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-  .approach-list { display: flex; flex-direction: column; gap: 2px; margin-top: 36px; }
-  .approach-item { background: var(--white); padding: 28px 32px; display: flex; gap: 20px; align-items: flex-start; border-left: 3px solid transparent; transition: border-color 0.2s; }
-  .approach-item:hover { border-left-color: var(--mid); }
-  .approach-num { font-family: "Playfair Display", serif; font-size: 1.5rem; font-weight: 700; color: var(--light); flex-shrink: 0; line-height: 1; margin-top: 2px; min-width: 28px; }
-  .approach-item h4 { font-size: 0.9rem; font-weight: 600; color: var(--dark); margin-bottom: 6px; }
-  .approach-item p { font-size: 0.85rem; line-height: 1.65; color: var(--text-mid); }
-  .approach-right { padding-top: 16px; }
-  .approach-right p { font-size: 0.95rem; line-height: 1.8; color: var(--text-mid); margin-bottom: 20px; }
-  .approach-right p strong { color: var(--text-dark); font-weight: 600; }
-  .approach-img { width: 100%; height: auto; display: block; margin-top: 12px; }
-  .location-badge { display: inline-flex; align-items: center; gap: 10px; background: var(--dark); color: rgba(255,255,255,0.7); padding: 12px 20px; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em; border-radius: 2px; margin-top: 8px; }
-  .location-badge svg { color: var(--mid); }
 
   /* CTA */
   .cta-section { background: var(--offwhite); padding: 80px 5%; }
@@ -211,7 +193,8 @@
   /* RESPONSIVE */
   @media (max-width: 900px) {
     .page-header-inner, .mission-inner, .approach-inner { grid-template-columns: 1fr; gap: 48px; }
-    .values-grid { grid-template-columns: 1fr; }
+    .values-layout, .values-grid { grid-template-columns: 1fr; }
+    .values-grid { grid-auto-rows: auto; }
     .footer-top { grid-template-columns: 1fr; gap: 32px; }
     .cta-inner { flex-direction: column; align-items: flex-start; }
     nav ul { display: none; }
@@ -343,13 +326,11 @@
 </div>
 
 <!-- OUR PROCESS -->
-<section class="process-section" aria-labelledby="process-heading">
+<section class="process-section" id="process" aria-labelledby="process-heading">
   <div class="process-inner">
     <div class="process-header">
       <div class="section-label">Our Process</div>
       <h2 class="section-title" id="process-heading">From concept <em>to your hands</em></h2>
-      <p>A simple, straightforward process to get your custom merch, on time and on brand. <span class="ps-hint-hover">Hover over each step to see what happens next.</span><span class="ps-hint-tap">Tap each step to see what happens next.</span></p>
-      <p class="ps-legend"><span class="ps-legend-dot"></span>Red steps are where you make the call.</p>
     </div>
     <ol class="process-steps">
       <li class="ps-step is-active" tabindex="0" aria-expanded="true">
@@ -414,65 +395,26 @@
   </div>
 </section>
 
-<!-- APPROACH -->
-<section class="approach-section" id="process">
-  <div class="approach-inner">
-    <div>
-      <div class="section-label">How We Work</div>
-      <h2 class="section-title">Simple process.<br><em style="color:var(--red)">Real results.</em></h2>
-      <div class="approach-list">
-        <div class="approach-item">
-          <div class="approach-num">1</div>
-          <div>
-            <h4>You tell us what you need</h4>
-            <p>No brief too rough. We ask the right questions and work with what you've got, product, logo, quantity, deadline.</p>
-          </div>
-        </div>
-        <div class="approach-item">
-          <div class="approach-num">2</div>
-          <div>
-            <h4>We quote and mock it up</h4>
-            <p>Upfront pricing and a complimentary digital mock-up so you can see exactly what you're getting before you commit.</p>
-          </div>
-        </div>
-        <div class="approach-item">
-          <div class="approach-num">3</div>
-          <div>
-            <h4>You approve, we produce</h4>
-            <p>Photo sample first, always. Once you're happy, we go to full production with no surprises.</p>
-          </div>
-        </div>
-        <div class="approach-item">
-          <div class="approach-num">4</div>
-          <div>
-            <h4>Delivered to your door</h4>
-            <p>Australia-wide. Shipping included in your quote. Quality guaranteed from the moment it lands.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="approach-right">
-      <div class="section-label">Based In</div>
-      <h2 class="section-title">Brisbane, <em>Australia</em></h2>
-      <p>We're a <strong>locally run, Australian-staffed</strong> business operating out of Brisbane. Everything is managed locally, no offshore customer service, no communication delays, no lost-in-translation briefs.</p>
-      <p>We partner with <strong>reputable Australian and New Zealand suppliers</strong> who share our commitment to quality. That means consistent product standards, reliable lead times, and merchandise that genuinely reflects your brand.</p>
-      <img class="approach-img" src="images/about-brisbane-map.webp" alt="Map of Australia with a pin on Brisbane, Queensland: local support, real people" width="549" height="322" loading="lazy">
-    </div>
-  </div>
-</section>
-
-<!-- VALUES -->
+<!-- VALUES + BASED IN -->
 <section class="values-section">
   <div class="values-inner">
     <div class="section-label">What We Stand For</div>
     <h2 class="section-title" style="color:white;">Our values & <em>approach</em></h2>
-    <div class="values-grid">
+    <div class="values-layout">
+      <div class="based-card">
+        <div class="section-label">Based In</div>
+        <h3>Brisbane, <em>Australia</em></h3>
+        <p>We're a <strong>locally run, Australian-staffed</strong> business operating out of Brisbane. Everything is managed locally, no offshore customer service, no communication delays, no lost-in-translation briefs. Local decoration, local fulfilment, and a team that understands the market you're operating in.</p>
+        <p>We partner with <strong>reputable Australian and New Zealand suppliers</strong> who share our commitment to quality. That means consistent product standards, reliable lead times, and merchandise that genuinely reflects your brand.</p>
+        <img src="images/about-brisbane-map.webp" alt="Map of Australia with a pin on Brisbane, Queensland: local support, real people" width="549" height="322" loading="lazy">
+      </div>
+      <div class="values-grid">
       <div class="value-card">
         <div class="value-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
-        <h3>Personal Service</h3>
-        <p>Every order is managed by a dedicated person from brief to delivery. You have one contact, clear communication, and someone who genuinely cares about the outcome.</p>
+        <h3>Personal, End-to-End Service</h3>
+        <p>A dedicated person manages your order from first enquiry to merchandise at your door. One contact, clear communication, and someone who genuinely cares about the outcome.</p>
       </div>
       <div class="value-card">
         <div class="value-icon">
@@ -480,13 +422,6 @@
         </div>
         <h3>Quality First</h3>
         <p>We only work with reputable suppliers and back every order with a 100% quality guarantee. If it's not right, we fix it, no arguments, no delays.</p>
-      </div>
-      <div class="value-card">
-        <div class="value-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        </div>
-        <h3>Local & Proud</h3>
-        <p>We're Brisbane-based and Australian-run. Local decoration, local fulfilment, and a team that understands the market you're operating in.</p>
       </div>
       <div class="value-card">
         <div class="value-icon">
@@ -502,12 +437,6 @@
         <h3>See Before You Commit</h3>
         <p>Every order includes a complimentary photo sample before production begins. You approve it, then we go. No surprises at the finish line.</p>
       </div>
-      <div class="value-card">
-        <div class="value-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
-        </div>
-        <h3>End-to-End Managed</h3>
-        <p>From your first enquiry through to merchandise at your door, we handle every step. You focus on your business, we handle the rest.</p>
       </div>
     </div>
   </div>
