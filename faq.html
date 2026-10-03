@@ -52,7 +52,7 @@
         {
           "@type": "Question",
           "name": "What is the minimum order quantity?",
-          "acceptedAnswer": { "@type": "Answer", "text": "MOQs vary by product, typically starting from 25–50 units. We'll advise the specific MOQ in your quote." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Most of our products have a minimum of 25 units. We confirm the exact MOQ for your product when we send your quote." }
         },
         {
           "@type": "Question",
@@ -62,7 +62,7 @@
         {
           "@type": "Question",
           "name": "How long does delivery take?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Turnaround time depends on the product and quantity, but we aim for fast production and delivery across Australia." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Standard orders take 3–4 weeks and custom orders take 12–13 weeks. Rush orders can be accommodated." }
         },
         {
           "@type": "Question",
@@ -234,6 +234,11 @@
 
   /* FAQ SECTIONS */
   .faq-sections { display: flex; flex-direction: column; gap: 64px; }
+
+  .sample-banner { display: flex; gap: 20px; align-items: flex-start; background: var(--dark); padding: 28px 32px; border-radius: 6px; }
+  .sample-banner-icon { flex-shrink: 0; width: 48px; height: 48px; border-radius: 6px; background: rgba(78,128,152,0.25); color: var(--light); display: flex; align-items: center; justify-content: center; }
+  .sample-banner h2 { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: var(--white); line-height: 1.3; margin-bottom: 8px; }
+  .sample-banner p { font-size: 0.92rem; line-height: 1.7; color: rgba(255,255,255,0.72); }
 
   .faq-section-title {
     font-family: 'Playfair Display', serif;
@@ -506,6 +511,7 @@
 
   /* ── Mobile polish (≤480px) ── */
   @media (max-width: 480px) {
+    .sample-banner { flex-direction: column; gap: 14px; padding: 24px 20px; }
     html { font-size: 15px; }
     body { overflow-x: hidden; }
     nav { padding: 0 4%; }
@@ -584,6 +590,15 @@
   <!-- FAQ SECTIONS -->
   <div class="faq-sections">
 
+    <!-- PHOTO SAMPLE BANNER -->
+    <div class="sample-banner">
+      <div class="sample-banner-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+      <div>
+        <h2>Every order includes a complimentary photo sample</h2>
+        <p>Before your bulk run begins, we make a real physical sample of your design and send you photos for approval. You see exactly how your logo looks on the actual product, and nothing goes into production until you're happy.</p>
+      </div>
+    </div>
+
     <!-- ORDERING -->
     <div id="ordering">
       <div class="faq-section-title">
@@ -639,7 +654,7 @@
           <div class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Yes, most promotional products have supplier minimums, usually around 50–100 units, depending on the product. We'll confirm the exact MOQ when we provide your quote. Small orders are sometimes possible, so it's always worth asking.</div>
+          <div class="faq-answer-inner">Most of our products have a minimum of 25 units. We confirm the exact MOQ for your product when we send your quote.</div>
         </div>
       </div>
 
@@ -666,7 +681,7 @@
 
       <div class="faq-item">
         <button class="faq-question" onclick="toggle(this)" aria-expanded="false">
-          <span>How much does a sample cost?</span>
+          <span>How much does a physical sample cost?</span>
           <div class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
         </button>
         <div class="faq-answer">
@@ -691,7 +706,7 @@
           <div class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Standard lead time is 3–4 weeks for locally stocked products. Fully custom-made products from overseas can take up to 12 weeks. If you need something urgently, let us know, rush orders may be possible depending on stock and production availability.</div>
+          <div class="faq-answer-inner"><strong>Standard:</strong> 3–4 weeks<br><strong>Custom:</strong> 12–13 weeks<br>Rush orders can be accommodated.</div>
         </div>
       </div>
 
