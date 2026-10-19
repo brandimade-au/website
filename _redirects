@@ -8,3 +8,6 @@ https://brandimade.netlify.app/* https://brandimade.com.au/:splat 301!
 # How It Works page was removed; send visitors to the process section on About
 /how-it-works.html  /about.html#process  301!
 /how-it-works       /about.html#process  301!
+
+# Short link used in email signatures and quotes
+/terms  /terms.html  200
